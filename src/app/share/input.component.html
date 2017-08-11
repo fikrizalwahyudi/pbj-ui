@@ -1,0 +1,48 @@
+<div *ngIf="conf.type=='text'" class="form-group">
+    <label>{{conf.judul}}</label>
+    <input  [(ngModel)]="value" id='{{conf.id}}' type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [readonly]="conf.readonly" [required]='conf.required'>
+</div>
+<div *ngIf="conf.type=='password'" class="form-group">
+    <label>{{conf.judul}}</label>
+    <input  [(ngModel)]="value" id='{{conf.id}}' type='password'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required' >
+</div>
+<div *ngIf="conf.type=='number'" class="form-group">
+    <label>{{conf.judul}}</label>
+    <input [(ngModel)]="value" id='{{conf.id}}' type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required'  disabled='{{conf.disabled}}'>
+</div>
+<div *ngIf="conf.type=='textarea'" class="form-group">
+    <label>{{conf.judul}}</label>
+    <textarea [(ngModel)]="value" id='{{conf.id}}'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required' [readonly]="conf.readonly">  </textarea>
+</div>
+<div *ngIf="conf.type=='date'" class="form-group">
+    <label>{{conf.judul}}</label>
+    <input [(ngModel)]="value" id='{{conf.id}}'  type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required'>
+</div>
+<div *ngIf="conf.type=='phone'" class="form-group">
+    <label>{{conf.judul}}</label>
+    
+    <div class="input-group">
+        <div class="input-group-addon">
+            <i class="fa fa-phone"></i>
+        </div>
+        <input [(ngModel)]="value" id='{{conf.id}}'  type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" data-inputmask="&quot;mask&quot;: &quot;(9999) 9999999&quot;" data-mask2="">
+    </div>
+</div>
+<div *ngIf="conf.type=='email'" class="form-group">
+    <label>{{conf.judul}}</label>
+    <input [(ngModel)]="value" id='{{conf.id}}'  type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" disabled='{{conf.disabled}}' pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" [required]='conf.required' email>
+</div>
+
+<div *ngIf="conf.type=='file'" class="form-group">
+    <label>{{conf.judul}}</label>
+    <input id='{{conf.id}}' type="{{conf.type}}" placeholder="Input File" accept="{{conf.accept}}">
+</div>
+
+<div *ngIf="conf.type=='submit'" class="form-group">
+    <label></label>
+    <button type="submit" class="btn btn-success pull-right">Tambah</button>
+</div>
+
+
+
+    
