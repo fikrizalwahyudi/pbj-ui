@@ -6,6 +6,10 @@ import { Dashboard1Component } from './dashboard1/dashboard1.component';
 import { AuthGuard } from '../library/_guards/auth.guards';
 import { SuratPertamaComponent } from './surat-pertama/surat-pertama.component';
 import { SuratKeduaComponent } from './surat-kedua/surat-kedua.component';
+import { PenggunaComponent } from './master/pengguna/pengguna.component';
+import { PegawaiComponent } from './master/pegawai/pegawai.component';
+import { PenyediaComponent } from './master/penyedia/penyedia.component';
+import { ProfileComponent } from './profile/profile.component';
 
 // canActivate:[AuthGuard]
 @NgModule({
@@ -20,6 +24,10 @@ import { SuratKeduaComponent } from './surat-kedua/surat-kedua.component';
             { path:'laporan2', component: Dashboard1Component },
             { path:'surat1', component: SuratPertamaComponent },
             { path:'surat2', component: SuratKeduaComponent },
+            { path:'pengguna', component: PenggunaComponent },
+            { path:'pegawai', component: PegawaiComponent },
+            { path:'penyedia', component: PenyediaComponent },
+            { path:'profile', component: ProfileComponent },
         ]
      }
     ])

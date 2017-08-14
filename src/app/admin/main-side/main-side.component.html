@@ -1,6 +1,6 @@
 <aside class="main-sidebar">
     <section class="sidebar">
-      <div class="user-panel">
+      <!-- <div class="user-panel">
         <div class="pull-left image">
           <img src="assets/img/avatar5.png" class="img-circle" alt="User Image">
         </div>
@@ -17,7 +17,7 @@
                 </button>
               </span>
         </div>
-      </form>
+      </form> -->
 
       <ul class="sidebar-menu">
         <li class="header">MENU</li>
@@ -28,13 +28,27 @@
         </li>
         <li routerLinkActive="active">
           <a href="javascript:void(0)" routerLink="surat1">
-            <i class="fa fa-dashboard"></i> <span>Surat 1</span>
+            <i class="fa fa-envelope-open"></i> <span>Surat 1</span>
           </a>
         </li>
         <li routerLinkActive="active">
           <a href="javascript:void(0)" routerLink="surat2">
-            <i class="fa fa-dashboard"></i> <span>Surat 2</span>
+            <i class="fa fa-envelope-open"></i> <span>Surat 2</span>
           </a>
+        </li>
+        <li routerLinkActive="active" class="treeview" id="menu-shift-master">
+          <a href="javascript:void(0)">
+            <i class="fa fa-list"></i>
+            <span>Master Data</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li routerLinkActive="active"><a id="menu-pengguna" href="javascript:void(0)" routerLink="pengguna"><i class="fa fa-circle-o"></i> Pengguna</a></li>
+            <li routerLinkActive="active"><a id="menu-pegawai" href="javascript:void(0)" routerLink="pegawai"><i class="fa fa-circle-o"></i> Data Pegawai</a></li>
+            <li routerLinkActive="active"><a id="menu-penyedia" href="javascript:void(0)" routerLink="penyedia"><i class="fa fa-circle-o"></i> Data Penyedia</a></li>
+          </ul>
         </li>
         <li routerLinkActive="active" class="treeview" id="menu-shift-laporan">
           <a href="javascript:void(0)">

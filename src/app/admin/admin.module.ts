@@ -11,6 +11,11 @@ import { Dashboard1Component } from './dashboard1/dashboard1.component';
 import { ShareModule } from '../share/share.module';
 import { SuratPertamaComponent } from './surat-pertama/surat-pertama.component';
 import { SuratKeduaComponent } from './surat-kedua/surat-kedua.component';
+import { PenggunaComponent } from './master/pengguna/pengguna.component';
+import { PegawaiComponent } from './master/pegawai/pegawai.component';
+import { PenyediaComponent } from './master/penyedia/penyedia.component';
+import { ProfileComponent } from './profile/profile.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,6 +23,7 @@ import { SuratKeduaComponent } from './surat-kedua/surat-kedua.component';
     CommonModule,
     AdminRoutingModule,
     ShareModule,
+    FormsModule
   ],
   declarations: [
     AdminComponent, 
@@ -25,7 +31,7 @@ import { SuratKeduaComponent } from './surat-kedua/surat-kedua.component';
     MainHeaderComponent, 
     FooterComponent, 
     ControlSidebarComponent, 
-    Dashboard1Component, SuratPertamaComponent, SuratKeduaComponent
+    Dashboard1Component, SuratPertamaComponent, SuratKeduaComponent, PenggunaComponent, PegawaiComponent, PenyediaComponent, ProfileComponent
   ],
   exports: [AdminComponent]
 })
