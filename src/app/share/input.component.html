@@ -1,9 +1,10 @@
 
 
 <div *ngIf="conf.type!=='submit'"  class="form-group row">
-    <!-- <label>{{conf.judul}}</label> <input  [(ngModel)]="value" id='{{conf.id}}' type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [readonly]="conf.readonly" [required]='conf.required'> -->
+    <label>{{conf.judul}}</label> <input *ngIf="conf.type=='text'"  [(ngModel)]="value" id='{{conf.id}}' type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [readonly]="conf.readonly" [required]='conf.required'>
+    <input *ngIf="conf.type=='password'"  [(ngModel)]="value" id='{{conf.id}}' type='password'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required' >
 
-    <div class="col-md-3">
+    <!-- <div class="col-md-3">
         <label class="form-control-label" for="l6">{{conf.judul}}</label>
     </div>
     <div class="col-md-9">
@@ -11,7 +12,7 @@
             <input *ngIf="conf.type=='text'"  [(ngModel)]="value" id='{{conf.id}}' type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [readonly]="conf.readonly" [required]='conf.required'>
             <input *ngIf="conf.type=='password'"  [(ngModel)]="value" id='{{conf.id}}' type='password'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required' >
         </div>
-    </div>
+    </div> -->
 </div>
 <!-- <div *ngIf="conf.type=='password'" class="form-group">
     <label>{{conf.judul}}</label>

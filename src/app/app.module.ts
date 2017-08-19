@@ -14,7 +14,7 @@ import { AuthGuard } from './library/_guards/auth.guards';
 import { AuthService } from './library/_services/auth.service';
 import { ApiService } from './library/_services/api.service';
 import { LoginModule } from './login/login.module';
-import { PenggunaFormComponent } from './master/pengguna/pengguna-form/pengguna-form.component';
+import { PenggunaFormComponent } from './admin/master/pengguna/pengguna-form/pengguna-form.component';
 
 
 @NgModule({

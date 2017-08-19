@@ -10,7 +10,7 @@ import { PenggunaComponent } from './master/pengguna/pengguna.component';
 import { PegawaiComponent } from './master/pegawai/pegawai.component';
 import { PenyediaComponent } from './master/penyedia/penyedia.component';
 import { ProfileComponent } from './profile/profile.component';
-import { PenggunaFormComponent } from '../master/pengguna/pengguna-form/pengguna-form.component';
+import { PenggunaFormComponent } from '../admin/master/pengguna/pengguna-form/pengguna-form.component';
 
 // canActivate:[AuthGuard]
 @NgModule({
