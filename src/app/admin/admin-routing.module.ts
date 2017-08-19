@@ -10,6 +10,7 @@ import { PenggunaComponent } from './master/pengguna/pengguna.component';
 import { PegawaiComponent } from './master/pegawai/pegawai.component';
 import { PenyediaComponent } from './master/penyedia/penyedia.component';
 import { ProfileComponent } from './profile/profile.component';
+import { PenggunaFormComponent } from '../master/pengguna/pengguna-form/pengguna-form.component';
 
 // canActivate:[AuthGuard]
 @NgModule({
@@ -25,6 +26,7 @@ import { ProfileComponent } from './profile/profile.component';
             { path:'surat1', component: SuratPertamaComponent },
             { path:'surat2', component: SuratKeduaComponent },
             { path:'pengguna', component: PenggunaComponent },
+            { path:'penggunaForm', component: PenggunaFormComponent },
             { path:'pegawai', component: PegawaiComponent },
             { path:'penyedia', component: PenyediaComponent },
             { path:'profile', component: ProfileComponent },

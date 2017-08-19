@@ -4,11 +4,12 @@ import { InputComponent } from './input.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header.component';
 import { SpinnerComponent } from './spinner.component';
+import { SelectComponent } from './select.component';
 
 @NgModule({
-    declarations: [InputComponent,HeaderComponent, SpinnerComponent],
+    declarations: [InputComponent,HeaderComponent, SpinnerComponent,SelectComponent],
     imports: [ CommonModule,FormsModule ],
-    exports: [InputComponent,HeaderComponent, SpinnerComponent],
+    exports: [InputComponent,HeaderComponent, SpinnerComponent,SelectComponent],
     providers: [],
 })
 export class ShareModule {}

@@ -1,8 +1,19 @@
-<div *ngIf="conf.type=='text'" class="form-group">
-    <label>{{conf.judul}}</label>
-    <input  [(ngModel)]="value" id='{{conf.id}}' type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [readonly]="conf.readonly" [required]='conf.required'>
+
+
+<div *ngIf="conf.type!=='submit'"  class="form-group row">
+    <!-- <label>{{conf.judul}}</label> <input  [(ngModel)]="value" id='{{conf.id}}' type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [readonly]="conf.readonly" [required]='conf.required'> -->
+
+    <div class="col-md-3">
+        <label class="form-control-label" for="l6">{{conf.judul}}</label>
+    </div>
+    <div class="col-md-9">
+        <div class="form-input-icon">
+            <input *ngIf="conf.type=='text'"  [(ngModel)]="value" id='{{conf.id}}' type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [readonly]="conf.readonly" [required]='conf.required'>
+            <input *ngIf="conf.type=='password'"  [(ngModel)]="value" id='{{conf.id}}' type='password'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required' >
+        </div>
+    </div>
 </div>
-<div *ngIf="conf.type=='password'" class="form-group">
+<!-- <div *ngIf="conf.type=='password'" class="form-group">
     <label>{{conf.judul}}</label>
     <input  [(ngModel)]="value" id='{{conf.id}}' type='password'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required' >
 </div>
@@ -37,11 +48,11 @@
     <label>{{conf.judul}}</label>
     <input id='{{conf.id}}' type="{{conf.type}}" placeholder="Input File" accept="{{conf.accept}}">
 </div>
-
+-->
 <div *ngIf="conf.type=='submit'" class="form-group">
     <label></label>
-    <button type="submit" class="btn btn-success pull-right">Tambah</button>
-</div>
+    <button type="submit" class="btn btn-success pull-right">Proses</button>
+</div> 
 
 
 

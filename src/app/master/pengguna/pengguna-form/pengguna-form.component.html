@@ -1,0 +1,23 @@
+<acContentHeader [conf]="{'judul':'Pengguna','subJudul':'Form Pengguna','hirarki':['Master','Pengguna','Form']}"></acContentHeader>
+
+<section class="content">
+    <div class="box box-success">
+        <div  class="box-header with-border ">
+            <h3  class="box-title pull-right"> <a (click)='keList()' href="javascript: void(0);" class="btn btn-link margin-inline">Lihat Daftar Pengguna >></a></h3>
+        </div>
+        <form role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+            <div class="box-body chat" id="chat-box"  >
+                <div style="padding:0px 60px 0px 60px" class='col-md-12'>
+                    <acSelect [(value)]="data.namaPegawai" name='Nama Pegawai' [conf]="{'type':'select','options':[{'val':0,'text':'Jon Snow'},{'val':1,'text':'Robert Baratheon'}],'judul':'Nama Pegawai'}" ></acSelect>  
+                    <acInput [(value)]='data.nama' [conf]="{'judul':'Nama Alias','id':'nama','placeholder':'Masukkan Nama Alias','required':true}" ></acInput>
+                    <acSelect [(value)]="data.role" name='Rules Pengguna' [conf]="{'type':'select','options':[{'val':0,'text':'Administrator'},{'val':1,'text':'Operator'}],'judul':'Rules Pengguna'}" ></acSelect>  
+                    <acInput [(value)]="data.password" name='Password' [conf]="{'judul':'Password','type':'password'}" ></acInput>
+                    <acInput [(value)]="data.confirmPassword" name='Password' [conf]="{'judul':'Konfirmasi Password','type':'password'}" ></acInput>
+                </div>
+            </div>
+            <div class="box-footer">
+                <acInput [conf]="{'type':'submit'}" ></acInput>
+            </div>
+        </form>
+    </div>
+</section>
