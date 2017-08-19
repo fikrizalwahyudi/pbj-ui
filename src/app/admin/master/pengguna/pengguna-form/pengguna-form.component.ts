@@ -23,6 +23,7 @@ export class PenggunaFormComponent implements OnInit {
   onSubmit(){
     this.router.navigateByUrl('admin/pengguna')
   }
+  
   keList(){
     this.router.navigateByUrl('admin/pengguna')
   }

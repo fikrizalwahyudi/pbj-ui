@@ -17,6 +17,8 @@ import { PenyediaComponent } from './master/penyedia/penyedia.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { PenggunaFormComponent } from './master/pengguna/pengguna-form/pengguna-form.component';
+import { PegawaiFormComponent } from './master/pegawai/pegawai-form/pegawai-form.component';
+import { PenyediaFormComponent } from './master/penyedia/penyedia-form/penyedia-form.component';
 
 
 @NgModule({
@@ -32,7 +34,7 @@ import { PenggunaFormComponent } from './master/pengguna/pengguna-form/pengguna-
     MainHeaderComponent, 
     FooterComponent, 
     ControlSidebarComponent, 
-    Dashboard1Component, SuratPertamaComponent, SuratKeduaComponent, PenggunaComponent, PegawaiComponent, PenyediaComponent, ProfileComponent, PenggunaFormComponent
+    Dashboard1Component, SuratPertamaComponent, SuratKeduaComponent, PenggunaComponent, PegawaiComponent, PenyediaComponent, ProfileComponent, PenggunaFormComponent, PegawaiFormComponent, PenyediaFormComponent
   ],
   exports: [AdminComponent]
 })

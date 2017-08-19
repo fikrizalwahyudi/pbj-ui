@@ -12,8 +12,8 @@ import { CrudService } from '../../../library/_services/crud.service';
 
 export class PenggunaComponent implements OnInit {
   data=[{'id':'1','nama':'Jon Snow','username':'Jon','role':'admin','status':1},
-  {'id':'2','nama':'Jon Snow','username':'Jon','role':'admin','status':1},
-]
+    {'id':'2','nama':'Jon Snow','username':'Jon','role':'admin','status':1},
+  ]
 
   constructor(private router:Router) { }
 

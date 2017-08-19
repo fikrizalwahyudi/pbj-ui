@@ -1,0 +1,25 @@
+<acContentHeader [conf]="{'judul':'Penyedia','subJudul':'Form Penyedia','hirarki':['Master','Penyedia','Form']}"></acContentHeader>
+
+<section class="content">
+    <div class="box box-success">
+        <div  class="box-header with-border ">
+            <h3  class="box-title pull-right"> <a (click)='keList()' href="javascript: void(0);" class="btn btn-link margin-inline">Lihat Daftar Penyedia >></a></h3>
+        </div>
+        <form role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+            <div class="box-body chat" id="chat-box"  >
+                <div style="padding:0px 60px 0px 60px" class='col-md-12'>
+                    <acInput [(value)]='data.idPenyedia' [conf]="{'judul':'Nomor Induk Penyedia','id':'nama','placeholder':'Masukkan Nomor Induk Penyedia','required':true}" ></acInput>
+                    <acInput [(value)]='data.namaPerusahaan' [conf]="{'judul':'Nama Perusahaan','id':'nama','placeholder':'Masukkan Nama Perusahaan','required':true}" ></acInput>
+                    <acInput [(value)]='data.siup' [conf]="{'judul':'No Induk Perusahaan','id':'nama','placeholder':'Masukkan No Induk Perusahaan','required':true}" ></acInput>
+                    <acInput [(value)]='data.contactPerson' [conf]="{'judul':'Contact Person','id':'nama','placeholder':'Masukkan Contact Person'}" ></acInput>
+                    <acInput [(value)]='data.alamatPenyedia' [conf]="{'judul':'Alamat Penyedia','id':'nama','placeholder':'Masukkan Alamat Penyedia'}" ></acInput>
+                    <acInput [(value)]='data.email' [conf]="{'type':'email','judul':'Email','id':'nama','placeholder':'Masukkan Email','required':true}" ></acInput>
+                    
+                </div>
+            </div>
+            <div class="box-footer">
+                <acInput [conf]="{'type':'submit'}" ></acInput>
+            </div>
+        </form>
+    </div>
+</section>
