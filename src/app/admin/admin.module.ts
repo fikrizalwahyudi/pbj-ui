@@ -16,7 +16,7 @@ import { PegawaiComponent } from './master/pegawai/pegawai.component';
 import { PenyediaComponent } from './master/penyedia/penyedia.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
-import { PenggunaFormComponent } from './pengguna/pengguna-form/pengguna-form.component';
+import { PenggunaFormComponent } from './master/pengguna/pengguna-form/pengguna-form.component';
 
 
 @NgModule({
