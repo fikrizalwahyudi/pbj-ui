@@ -16,5 +16,9 @@ export class PengadaanFormComponent implements OnInit {
   keList(){
     this.router.navigateByUrl('admin/dashboard')
   }
+  
+  keKak(){
+    this.router.navigateByUrl('admin/kakForm')
+  }
 
 }
