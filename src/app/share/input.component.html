@@ -2,9 +2,10 @@
 
 <div *ngIf="conf.type!=='submit'"  class="form-group row">
     <label>{{conf.judul}}</label> <input *ngIf="conf.type=='text'"  [(ngModel)]="value" id='{{conf.id}}' type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [readonly]="conf.readonly" [required]='conf.required'>
-    <input *ngIf="conf.type=='password'"  [(ngModel)]="value" id='{{conf.id}}' type='password'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required' >
-    <input *ngIf="conf.type=='number'" [(ngModel)]="value" id='{{conf.id}}' type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required'  disabled='{{conf.disabled}}'>
-    <input *ngIf="conf.type=='email'"  [(ngModel)]="value" id='{{conf.id}}'  type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" disabled='{{conf.disabled}}' pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" [required]='conf.required' email>
+    <input *ngIf="conf.type=='password'" [readonly]="conf.readonly"  [(ngModel)]="value" id='{{conf.id}}' type='password'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required' >
+    <input *ngIf="conf.type=='number'" [(ngModel)]="value" id='{{conf.id}}' type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [readonly]="conf.readonly" [required]='conf.required'  disabled='{{conf.disabled}}'>
+    <input *ngIf="conf.type=='email'"  [(ngModel)]="value" id='{{conf.id}}'  type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [readonly]="conf.readonly" disabled='{{conf.disabled}}' pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" [required]='conf.required' email>
+    <input *ngIf="conf.type=='date'" [(ngModel)]="value" id='{{conf.id}}'  type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required'>
 
     <!-- <div class="col-md-3">
         <label class="form-control-label" for="l6">{{conf.judul}}</label>
