@@ -8,18 +8,18 @@
         <form role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
             <div class="box-body chat" id="chat-box"  >
                 <div style="padding:0px 60px 0px 60px" class='col-md-6'>
-                  <acInput [(value)]='data.noIdPengadaan' [conf]="{'judul':'No ID Pengadaan','required':true,'type':'number'}" ></acInput>
+                  <acInput [(value)]='data.noIdPengadaan' [conf]="{'judul':'No ID Pengadaan','required':false,'type':'number'}" ></acInput>
                   <acSelect [(value)]="data.requestor"  [conf]="{'type':'select','options':[{'val':0,'text':'Requestor A'},{'val':1,'text':'Requestor B'}],'judul':'Requestor'}" ></acSelect>  
                   <acSelect [(value)]="data.kepada"  [conf]="{'type':'select','options':[{'val':0,'text':'KPA 1'},{'val':1,'text':'KPA II'}],'judul':'Kepada'}" ></acSelect>  
-                  <acInput [(value)]='data.nomor' [conf]="{'judul':'Nomor','required':true}" ></acInput>
-                  <acInput [(value)]='data.tgl' [conf]="{'judul':'Tanggal','required':true,'type':'date'}" ></acInput>
+                  <acInput [(value)]='data.nomor' [conf]="{'judul':'Nomor','required':false}" ></acInput>
+                  <acInput [(value)]='data.tgl' [conf]="{'judul':'Tanggal','required':false,'type':'date'}" ></acInput>
                 </div>
 
                 <div style="padding:0px 60px 0px 60px" class='col-md-6'>
                     <acSelect [(value)]="data.sifat"  [conf]="{'type':'select','options':[{'val':KAA,'text':'KAB'},{'val':1,'text':'KPA II'}],'judul':'Sifat'}" ></acSelect>  
-                    <acInput [(value)]='data.perihal' [conf]="{'judul':'Perihal','required':true,'type':'number'}" ></acInput>
-                    <acInput [(value)]='data.program' [conf]="{'judul':'Program','required':true,'type':'number'}" ></acInput>
-                    <acInput [(value)]='data.kegiatan' [conf]="{'judul':'Kegiatan','required':true,'type':'number'}" ></acInput>
+                    <acInput [(value)]='data.perihal' [conf]="{'judul':'Perihal','required':false,'type':'number'}" ></acInput>
+                    <acInput [(value)]='data.program' [conf]="{'judul':'Program','required':false,'type':'number'}" ></acInput>
+                    <acInput [(value)]='data.kegiatan' [conf]="{'judul':'Kegiatan','required':false,'type':'number'}" ></acInput>
                 </div>
                 <div  class="box-body chat" id="chat-box"  >
                   <table style="padding:0px 60px 0px 60px; background-color:lightblue;"   class='table table-striped col-md-12 text-center'>
@@ -57,14 +57,14 @@
             </div>
             <div class="box-footer">
               <div class='row'>
-                <button type="submit" style='margin: 0px 0px 0px 10px;' class="btn btn-success col-md-1">Buat KAK</button>
-                <button type="submit" style='margin: 0px 0px 0px 10px;' class="btn btn-success col-md-2">Upload Spesifikasi Teknis</button>
-                <button type="submit" style='margin: 0px 0px 0px 10px;' class="btn btn-success col-md-2">Upload Gambar Barang</button>
-                <button type="submit" style='margin: 0px 0px 0px 10px;' class="btn btn-success col-md-2">Upload Design</button>
-                <button type="submit" style='margin: 0px 0px 0px 10px;' class="btn btn-success col-md-2">Upload Nota Signed-off</button>
+                <button (click)='keKak()'  style='margin: 0px 0px 0px 10px;' class="btn btn-success col-md-1">Buat KAK</button>
+                <button  style='margin: 0px 0px 0px 10px;' class="btn btn-success col-md-2">Upload Spesifikasi Teknis</button>
+                <button  style='margin: 0px 0px 0px 10px;' class="btn btn-success col-md-2">Upload Gambar Barang</button>
+                <button  style='margin: 0px 0px 0px 10px;' class="btn btn-success col-md-2">Upload Design</button>
+                <button  style='margin: 0px 0px 0px 10px;' class="btn btn-success col-md-2">Upload Nota Signed-off</button>
                 <button (click)="onSubmit()" type="submit" style='margin: 0px 0px 0px 10px;' class="btn btn-success col-md-2">Print / Simpan</button>
               </div>
-              <h3  class="box-title"> <a  href="javascript: void(0);" class="btn btn-link margin-inline" data-toggle="modal" data-target="#detailStatusModal">Detail Modal >></a></h3>
+              <h3  class="box-title"> <a  href="javascript: void(0);" class="btn btn-link margin-inline" data-toggle="modal" data-target="#detailStatusModal">Document Status >></a></h3>
             </div>
         </form>
     </div>

@@ -12,7 +12,7 @@ import { CrudService } from '../../../library/_services/crud.service';
 
 export class PegawaiComponent implements OnInit {
   data=[{'id':'1','nama':'Jon Snow','gol':'Gol I','jabatan':'Jabatan I','status':1},
-    {'id':'2','nama':'Jon Snow','gol':'Gol II','jabatan':'Jabaran II','status':1},
+    {'id':'2','nama':'Ed Stark','gol':'Gol II','jabatan':'Jabaran II','status':1},
   ]
 
   constructor(private router:Router) { }

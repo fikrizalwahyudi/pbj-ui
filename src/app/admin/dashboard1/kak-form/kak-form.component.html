@@ -1,0 +1,26 @@
+<acContentHeader [conf]="{'judul':'KAK','subJudul':'Form KAK','hirarki':['Pengajuan Pengadaan','Pembuatan KAK','Form']}"></acContentHeader>
+
+<section class="content">
+    <div class="box box-success">
+        <form role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+            <div class="box-body chat" id="chat-box"  >
+                <div style="padding:0px 60px 0px 60px" class='col-md-6'>
+                    <acInput [(value)]='data.latarBelakang' [conf]="{'type':'textarea','judul':'Latar Belakang','required':false}" ></acInput>
+                    <acInput [(value)]='data.maksud' [conf]="{'type':'textarea','judul':'Maksud dan Tujuan','required':false}" ></acInput>
+                    <acInput [(value)]='data.sumberPendanaan' [conf]="{'type':'textarea','judul':'Sumber Pendanaan','required':false}" ></acInput>
+                    <acInput [(value)]='data.halLain' [conf]="{'type':'textarea','judul':'Hal-hal Lain Yang Di Perlukan','required':false}" ></acInput>
+                    <acInput [(value)]='data.waktuPelaksanaan' [conf]="{'type':'date','judul':'waktuPelaksanaan','required':false}" ></acInput>
+                </div>
+                <div style="padding:0px 60px 0px 60px" class='col-md-6'>
+                    <acInput [(value)]='data.pelaksanaanDiperlukan' [conf]="{'type':'textarea','judul':'Pelaksanaan Yang Diperlukan','required':false}" ></acInput>
+                    <acInput [(value)]='data.deskripsiWaktuPelaksanaan' [conf]="{'type':'textarea','judul':'Deskripsi Waktu Pelaksanaan','required':false}" ></acInput>
+                    <acInput [(value)]='data.spesifikasiTeksnisBarang' [conf]="{'type':'textarea','judul':'Spesifikasi Teknis Barang','required':false}" ></acInput>
+                    <acInput [(value)]='data.perkiraanBiaya' [conf]="{'type':'number','judul':'Perkiraan Biaya Pekerjaan','required':false}" ></acInput>
+                </div>
+            </div>
+            <div class="box-footer">
+                <acInput [conf]="{'type':'submit'}" ></acInput>
+            </div>
+        </form>
+    </div>
+</section>
