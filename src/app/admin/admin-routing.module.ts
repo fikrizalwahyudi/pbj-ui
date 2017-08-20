@@ -13,6 +13,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { PenggunaFormComponent } from '../admin/master/pengguna/pengguna-form/pengguna-form.component';
 import { PegawaiFormComponent } from './master/pegawai/pegawai-form/pegawai-form.component';
 import { PenyediaFormComponent } from './master/penyedia/penyedia-form/penyedia-form.component';
+import { PengadaanFormComponent } from './dashboard1/pengadaan-form/pengadaan-form.component';
 
 // canActivate:[AuthGuard]
 @NgModule({
@@ -34,6 +35,7 @@ import { PenyediaFormComponent } from './master/penyedia/penyedia-form/penyedia-
             { path:'penyedia', component: PenyediaComponent },
             { path:'penyediaForm', component: PenyediaFormComponent },
             { path:'profile', component: ProfileComponent },
+            { path:'pengadaanForm', component: PengadaanFormComponent },
         ]
      }
     ])
