@@ -22,6 +22,7 @@ import { PenyediaFormComponent } from './master/penyedia/penyedia-form/penyedia-
 import { PengadaanFormComponent } from './dashboard1/pengadaan-form/pengadaan-form.component';
 import { KakFormComponent } from './dashboard1/kak-form/kak-form.component';
 import { KpaComponent } from './dashboard1/kpa/kpa.component';
+import { PpkComponent } from './dashboard1/ppk/ppk.component';
 
 
 @NgModule({
@@ -37,7 +38,7 @@ import { KpaComponent } from './dashboard1/kpa/kpa.component';
     MainHeaderComponent, 
     FooterComponent, 
     ControlSidebarComponent, 
-    Dashboard1Component, SuratPertamaComponent, SuratKeduaComponent, PenggunaComponent, PegawaiComponent, PenyediaComponent, ProfileComponent, PenggunaFormComponent, PegawaiFormComponent, PenyediaFormComponent, PengadaanFormComponent, KakFormComponent, KpaComponent
+    Dashboard1Component, SuratPertamaComponent, SuratKeduaComponent, PenggunaComponent, PegawaiComponent, PenyediaComponent, ProfileComponent, PenggunaFormComponent, PegawaiFormComponent, PenyediaFormComponent, PengadaanFormComponent, KakFormComponent, KpaComponent, PpkComponent
   ],
   exports: [AdminComponent]
 })

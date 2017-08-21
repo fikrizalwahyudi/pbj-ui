@@ -16,6 +16,7 @@ import { PenyediaFormComponent } from './master/penyedia/penyedia-form/penyedia-
 import { PengadaanFormComponent } from './dashboard1/pengadaan-form/pengadaan-form.component';
 import { KakFormComponent } from './dashboard1/kak-form/kak-form.component';
 import { KpaComponent } from './dashboard1/kpa/kpa.component';
+import { PpkComponent } from './dashboard1/ppk/ppk.component';
 
 // canActivate:[AuthGuard]
 @NgModule({
@@ -40,6 +41,7 @@ import { KpaComponent } from './dashboard1/kpa/kpa.component';
             { path:'pengadaanForm', component: PengadaanFormComponent },
             { path:'kakForm', component: KakFormComponent },
             { path:'kpa', component: KpaComponent },
+            { path:'ppk', component: PpkComponent },
         ]
      }
     ])
