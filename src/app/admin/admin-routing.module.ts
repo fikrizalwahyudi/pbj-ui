@@ -17,6 +17,9 @@ import { KakFormComponent } from './pengadaan/kak-form/kak-form.component';
 import { KpaComponent } from './pengadaan/kpa/kpa.component';
 import { PpkComponent } from './pengadaan/ppk/ppk.component';
 import { PengadaanFormComponent } from './pengadaan/pengadaan-form.component';
+import { TeknisComponent } from './pengadaan/teknis/teknis.component';
+import { TinjauKakComponent } from './pengadaan/tinjau-kak/tinjau-kak.component';
+import { TinjauTeknisComponent } from './pengadaan/tinjau-teknis/tinjau-teknis.component';
 
 // canActivate:[AuthGuard]
 @NgModule({
@@ -42,6 +45,9 @@ import { PengadaanFormComponent } from './pengadaan/pengadaan-form.component';
             { path:'kakForm', component: KakFormComponent },
             { path:'kpa', component: KpaComponent },
             { path:'ppk', component: PpkComponent },
+            { path:'teknis', component: TeknisComponent },
+            { path:'tinjauKak', component: TinjauKakComponent },
+            { path:'tinjauTeknis', component: TinjauTeknisComponent },
         ]
      }
     ])

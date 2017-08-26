@@ -23,6 +23,9 @@ import { PengadaanFormComponent } from './pengadaan/pengadaan-form.component';
 import { KakFormComponent } from './pengadaan/kak-form/kak-form.component';
 import { KpaComponent } from './pengadaan/kpa/kpa.component';
 import { PpkComponent } from './pengadaan/ppk/ppk.component';
+import { TeknisComponent } from './pengadaan/teknis/teknis.component';
+import { TinjauKakComponent } from './pengadaan/tinjau-kak/tinjau-kak.component';
+import { TinjauTeknisComponent } from './pengadaan/tinjau-teknis/tinjau-teknis.component';
 
 
 @NgModule({
@@ -38,7 +41,7 @@ import { PpkComponent } from './pengadaan/ppk/ppk.component';
     MainHeaderComponent, 
     FooterComponent, 
     ControlSidebarComponent, 
-    Dashboard1Component, SuratPertamaComponent, SuratKeduaComponent, PenggunaComponent, PegawaiComponent, PenyediaComponent, ProfileComponent, PenggunaFormComponent, PegawaiFormComponent, PenyediaFormComponent, PengadaanFormComponent, KakFormComponent, KpaComponent, PpkComponent
+    Dashboard1Component, SuratPertamaComponent, SuratKeduaComponent, PenggunaComponent, PegawaiComponent, PenyediaComponent, ProfileComponent, PenggunaFormComponent, PegawaiFormComponent, PenyediaFormComponent, PengadaanFormComponent, KakFormComponent, KpaComponent, PpkComponent, TeknisComponent, TinjauKakComponent, TinjauTeknisComponent
   ],
   exports: [AdminComponent]
 })
