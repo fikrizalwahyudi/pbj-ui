@@ -36,6 +36,24 @@
             <i class="fa fa-envelope-open"></i> <span>Surat 2</span>
           </a>
         </li> -->
+        <li routerLinkActive="active" class="treeview" id="menu-penanggung">
+          <a href="javascript:void(0)">
+            <i class="fa fa-list"></i>
+            <span>Penanggung Jawab Kegiatan</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li routerLinkActive="active"><a id="menu-pengadaanForm" href="javascript:void(0)" routerLink="pengadaanForm"><i class="fa fa-circle-o"></i>Buat Pengajuan Baru</a></li>
+          </ul>
+          <ul class="treeview-menu">
+            <li routerLinkActive="active"><a id="menu-kakForm" href="javascript:void(0)" routerLink="kakForm"><i class="fa fa-circle-o"></i>Pembuatan KAK</a></li>
+          </ul>
+          <ul class="treeview-menu">
+            <li routerLinkActive="active"><a id="menu-teknis" href="javascript:void(0)" routerLink="teknis"><i class="fa fa-circle-o"></i>Pembuatan Spesifikasi Teknis</a></li>
+          </ul>
+        </li>
         <li routerLinkActive="active" class="treeview" id="menu-kpa">
           <a href="javascript:void(0)">
             <i class="fa fa-list"></i>
@@ -45,7 +63,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li routerLinkActive="active"><a id="menu-pengguna" href="javascript:void(0)" routerLink="kpa"><i class="fa fa-circle-o"></i>Penerbitan Nota ke PP</a></li>
+            <li routerLinkActive="active"><a id="menu-pengguna" href="javascript:void(0)" routerLink="kpa"><i class="fa fa-circle-o"></i>Review Pengajuan</a></li>
           </ul>
         </li>
         <li routerLinkActive="active" class="treeview" id="menu-shift-ppk">
@@ -57,7 +75,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li routerLinkActive="active"><a id="menu-pengguna" href="javascript:void(0)" routerLink="ppk"><i class="fa fa-circle-o"></i>Review</a></li>
+            <li routerLinkActive="active"><a id="menu-pengguna" href="javascript:void(0)" routerLink="ppk"><i class="fa fa-circle-o"></i>Penerbitan Nota Ke PP</a></li>
           </ul>
         </li>
         <li routerLinkActive="active" class="treeview" id="menu-master">

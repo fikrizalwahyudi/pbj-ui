@@ -19,10 +19,10 @@ import { FormsModule } from '@angular/forms';
 import { PenggunaFormComponent } from './master/pengguna/pengguna-form/pengguna-form.component';
 import { PegawaiFormComponent } from './master/pegawai/pegawai-form/pegawai-form.component';
 import { PenyediaFormComponent } from './master/penyedia/penyedia-form/penyedia-form.component';
-import { PengadaanFormComponent } from './dashboard1/pengadaan-form/pengadaan-form.component';
-import { KakFormComponent } from './dashboard1/kak-form/kak-form.component';
-import { KpaComponent } from './dashboard1/kpa/kpa.component';
-import { PpkComponent } from './dashboard1/ppk/ppk.component';
+import { PengadaanFormComponent } from './pengadaan/pengadaan-form.component';
+import { KakFormComponent } from './pengadaan/kak-form/kak-form.component';
+import { KpaComponent } from './pengadaan/kpa/kpa.component';
+import { PpkComponent } from './pengadaan/ppk/ppk.component';
 
 
 @NgModule({

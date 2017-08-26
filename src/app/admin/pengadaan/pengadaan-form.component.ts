@@ -10,9 +10,15 @@ export class PengadaanFormComponent implements OnInit {
   data={};
   constructor(private router:Router) { }
 
-  ngOnInit() {
+  ngOnInit() { 
+    $("#menu-penangging").addClass("active");
+    $("#menu-pengadaan").addClass("active");
   }
 
+  ngOnDestroy() {
+      $("#menu-penangging").removeClass("active");
+      $("#menu-pengadaan").removeClass("active");
+  }
   keList(){
     this.router.navigateByUrl('admin/dashboard')
   }
