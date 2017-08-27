@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class TeknisComponent implements OnInit {
-  data:any;
+  data=[];
   constructor() { 
-    this.data='';
+    this.data;
   }
 
   ngOnInit() {
