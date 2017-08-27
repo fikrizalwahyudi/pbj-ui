@@ -22,6 +22,7 @@ import { TinjauKakComponent } from './pengadaan/tinjau-kak/tinjau-kak.component'
 import { TinjauTeknisComponent } from './pengadaan/tinjau-teknis/tinjau-teknis.component';
 import { KertasKerjaComponent } from './pengadaan/kertas-kerja/kertas-kerja.component';
 import { DraftKontrakComponent } from './pengadaan/draft-kontrak/draft-kontrak.component';
+import { PenerbitanNotaComponent } from './pengadaan/penerbitan-nota/penerbitan-nota.component';
 
 // canActivate:[AuthGuard]
 @NgModule({
@@ -52,6 +53,7 @@ import { DraftKontrakComponent } from './pengadaan/draft-kontrak/draft-kontrak.c
             { path:'tinjauTeknis', component: TinjauTeknisComponent },
             { path:'kertasKerja', component: KertasKerjaComponent },
             { path:'draftKontrak', component: DraftKontrakComponent },
+            { path:'penerbitanNota', component: PenerbitanNotaComponent },
         ]
      }
     ])
