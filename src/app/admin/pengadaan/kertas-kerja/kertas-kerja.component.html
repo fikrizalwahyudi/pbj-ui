@@ -11,7 +11,7 @@
                 <acInput [(value)]='data.halLain' [conf]="{'readonly':true,'type':'textarea','judul':'Hal-hal Lain Yang Di Perlukan','required':true}" ></acInput>
                 <acInput [(value)]='data.tahunAnggaran ' [conf]="{'readonly':false,'type':'number','judul':'tahunAnggaran','required':false}" ></acInput>
 
-                <div  class="box-body chat" id="chat-box"  >
+                <div  class="box-body chat" id="chat-box" style="overflow-x: scroll;"  >
                   <table style="padding:0px 60px 0px 60px; background-color:lightblue;"   class='table table-striped col-md-12 text-center'>
                     <tr>
                       <th>Merk/Type</th>
@@ -27,7 +27,7 @@
                       <th>Keuntungan Dari Harga Dasar</th>
                       <th>Harga Satuan Sebelum Pajak</th>
                       <th>PPN</th>
-                      <th>Pembulatan Harga satuan Setelah Pajak (pembulatan ke bawah dalam ratusan)</th>
+                      <th>Pembulatan Harga satuan Setelah Pajak</th>
                       <th>HPS Final</th>
                       <th>Sumber Data Dukung</th>
                       <th>Kontrol Selisi</th>
