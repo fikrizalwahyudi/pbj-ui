@@ -8,8 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard1.component.css']
 })
 
-export class Dashboard1Component implements OnInit {
-
+export class Dashboard1Component implements OnInit {   katakunci:any;   showSpinner:any;
+  katakunci:any;
+  showSpinner:any;
   constructor(private router:Router) { }
 
   lineChart : morris.GridChart;
@@ -40,7 +41,7 @@ export class Dashboard1Component implements OnInit {
     );
   }
 
-  ngOnInit() {
+  cari(){};   ngOnInit() {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     
@@ -48,5 +49,8 @@ export class Dashboard1Component implements OnInit {
 
   tambah(){
     this.router.navigateByUrl('admin/pengadaanForm')
+  }
+  cari(){
+
   }
 }

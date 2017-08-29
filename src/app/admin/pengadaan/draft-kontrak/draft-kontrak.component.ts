@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './draft-kontrak.component.html',
   styles: []
 })
-export class DraftKontrakComponent implements OnInit {
+export class DraftKontrakComponent implements OnInit {   katakunci:any;   showSpinner:any;
   data=[];
   constructor() { }
 
-  ngOnInit() {
+  cari(){};   ngOnInit() {
   }
 
 }

@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './kertas-kerja.component.html',
   styles: []
 })
-export class KertasKerjaComponent implements OnInit {
+export class KertasKerjaComponent implements OnInit {   katakunci:any;   showSpinner:any;
   data=[];
   constructor() { }
 
-  ngOnInit() {
+  cari(){};   ngOnInit() {
   }
 
 }

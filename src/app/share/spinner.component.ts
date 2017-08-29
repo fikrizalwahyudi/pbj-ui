@@ -14,10 +14,10 @@ import { Component, OnInit, Input } from '@angular/core';
         }
     `]
 })
-export class SpinnerComponent implements OnInit {
+export class SpinnerComponent implements OnInit {   katakunci:any;   showSpinner:any;
     @Input() show: boolean;
 
     constructor() { }
 
-    ngOnInit() { }
+    cari(){};   ngOnInit() { }
 }

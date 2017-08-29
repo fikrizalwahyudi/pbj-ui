@@ -20,7 +20,7 @@ import 'rxjs/add/operator/catch';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit {   katakunci:any;   showSpinner:any;
   
   bodyClasses:string = "login-page";
   body = document.getElementsByTagName('body')[0];
@@ -96,7 +96,7 @@ export class LoginComponent implements OnInit {
    
   }
 
-  ngOnInit() {
+  cari(){};   ngOnInit() {
     //Add the login-page class to the body
     //$('body').addClass(this.bodyClasses);
     this.body.classList.add(this.bodyClasses);   //add the class   

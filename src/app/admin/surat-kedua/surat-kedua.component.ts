@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './surat-kedua.component.html',
   styleUrls: ['./surat-kedua.component.css']
 })
-export class SuratKeduaComponent implements OnInit {
+export class SuratKeduaComponent implements OnInit {   katakunci:any;   showSpinner:any;
 
   constructor() { }
 
-  ngOnInit() {
+  cari(){};   ngOnInit() {
   }
 
 }

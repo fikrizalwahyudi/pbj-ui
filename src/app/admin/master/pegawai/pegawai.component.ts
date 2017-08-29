@@ -10,14 +10,14 @@ import { CrudService } from '../../../library/_services/crud.service';
   styleUrls: ['./pegawai.component.css']
 })
 
-export class PegawaiComponent implements OnInit {
+export class PegawaiComponent implements OnInit {   katakunci:any;   showSpinner:any;
   data=[{'id':'1','nama':'Jon Snow','gol':'Gol I','jabatan':'Jabatan I','status':1},
     {'id':'2','nama':'Ed Stark','gol':'Gol II','jabatan':'Jabaran II','status':1},
   ]
 
   constructor(private router:Router) { }
 
-  ngOnInit() { 
+  cari(){};   ngOnInit() { 
     $("#menu-master").addClass("active");
     $("#menu-pegawai").addClass("active");
   }

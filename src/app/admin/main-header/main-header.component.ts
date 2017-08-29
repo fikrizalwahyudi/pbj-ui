@@ -8,13 +8,13 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './main-header.component.html',
   styleUrls: ['./main-header.component.css']
 })
-export class MainHeaderComponent implements OnInit {
+export class MainHeaderComponent implements OnInit {   katakunci:any;   showSpinner:any;
 
   constructor(
     private router:Router
   ) {}
 
-  ngOnInit() {
+  cari(){};   ngOnInit() {
   }
 
   gotoLogin(){

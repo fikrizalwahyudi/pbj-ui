@@ -36,7 +36,7 @@ export class InputComponent implements OnInit,AfterViewInit  {
         this.valueChange.emit(this.val);
     }
 
-    ngOnInit() { 
+    cari(){};   ngOnInit() { 
         if(this.conf.type==null){
             this.conf.type='text';
         }

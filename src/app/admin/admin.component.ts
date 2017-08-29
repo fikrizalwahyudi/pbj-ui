@@ -5,13 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
-export class AdminComponent implements OnInit {
+export class AdminComponent implements OnInit {   katakunci:any;   showSpinner:any;
   bodyClasses:string = "skin-blue sidebar-mini";
   body = document.getElementsByTagName('body')[0];
   
   constructor() { }
 
-  ngOnInit() {
+  cari(){};   ngOnInit() {
     //add the the body classes
     this.body.classList.add("skin-blue");
     this.body.classList.add("sidebar-mini");

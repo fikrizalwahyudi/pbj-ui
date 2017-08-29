@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './penerbitan-nota.component.html',
   styles: []
 })
-export class PenerbitanNotaComponent implements OnInit {
+export class PenerbitanNotaComponent implements OnInit {   katakunci:any;   showSpinner:any;
   data=[];
   constructor() { }
 
-  ngOnInit() {
+  cari(){};   ngOnInit() {
   }
 
 }

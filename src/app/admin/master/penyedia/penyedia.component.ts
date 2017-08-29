@@ -10,14 +10,14 @@ import { CrudService } from '../../../library/_services/crud.service';
   styleUrls: ['./penyedia.component.css']
 })
 
-export class PenyediaComponent implements OnInit {
+export class PenyediaComponent implements OnInit {   katakunci:any;   showSpinner:any;
   data=[{'id':'1','namaPerusahaan':'Stark Corp','contactPerson':'Brandon Stark','email':'bran@stark.com'},
   {'id':'2','namaPerusahaan':'Lanister Corp','contactPerson':'Jamie Laniester','email':'jamie@laniester.com'}
   ]
 
   constructor(private router:Router) { }
 
-  ngOnInit() { 
+  cari(){};   ngOnInit() { 
     $("#menu-master").addClass("active");
     $("#menu-penyedia").addClass("active");
   }
