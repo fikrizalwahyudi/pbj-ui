@@ -6,11 +6,13 @@ import { Router } from '@angular/router';
   templateUrl: './pengadaan-form.component.html',
   styleUrls: ['./pengadaan-form.component.css']
 })
-export class PengadaanFormComponent implements OnInit {
-  data={};
-  constructor(private router:Router) { }
+export class PengadaanFormComponent implements OnInit {   katakunci:any;   showSpinner:any;
+  data:any;
+  constructor(private router:Router) { 
+    this.data={};
+  }
 
-  ngOnInit() { 
+  cari(){};  onSubmit(){};   ngOnInit() { 
     $("#menu-penangging").addClass("active");
     $("#menu-pengadaan").addClass("active");
   }

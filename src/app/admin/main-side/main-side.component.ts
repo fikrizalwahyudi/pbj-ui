@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './main-side.component.html',
   styleUrls: ['./main-side.component.css']
 })
-export class MainSideComponent implements OnInit {
+export class MainSideComponent implements OnInit {   katakunci:any;   showSpinner:any;
 
   constructor() { }
 
-  ngOnInit() {
+  cari(){};  onSubmit(){};   ngOnInit() {
   }
 
 }

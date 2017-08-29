@@ -6,10 +6,16 @@ import { Router } from '@angular/router';
   templateUrl: './pengguna-form.component.html',
   styleUrls: ['./pengguna-form.component.css']
 })
-export class PenggunaFormComponent implements OnInit {
-  data=[];
-  constructor(private router:Router) { }
+export class PenggunaFormComponent implements OnInit {   katakunci:any;   showSpinner:any;
+  data:any;
+  constructor(private router:Router) {  
+    this.data={};
+  }
+  
+  cari(){
 
+  };
+  
   ngOnInit() { 
     $("#menu-master").addClass("active");
     $("#menu-pengguna").addClass("active");

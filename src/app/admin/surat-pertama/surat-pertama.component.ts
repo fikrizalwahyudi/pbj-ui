@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './surat-pertama.component.html',
   styleUrls: ['./surat-pertama.component.css']
 })
-export class SuratPertamaComponent implements OnInit {
+export class SuratPertamaComponent implements OnInit {   katakunci:any;   showSpinner:any;
 
   constructor() { }
 
-  ngOnInit() {
+  cari(){};  onSubmit(){};   ngOnInit() {
   }
 
 }

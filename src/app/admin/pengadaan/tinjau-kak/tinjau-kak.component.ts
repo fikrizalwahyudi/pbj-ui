@@ -5,13 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './tinjau-kak.component.html',
   styles: []
 })
-export class TinjauKakComponent implements OnInit {
+export class TinjauKakComponent implements OnInit {   katakunci:any;   showSpinner:any;
   data:any;
   constructor() {
     this.data="";
    }
 
-  ngOnInit() {
+  cari(){};  onSubmit(){};   ngOnInit() {
   }
 
 }

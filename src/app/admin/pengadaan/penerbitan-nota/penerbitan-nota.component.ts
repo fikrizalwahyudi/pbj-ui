@@ -5,9 +5,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './penerbitan-nota.component.html',
   styles: []
 })
-export class PenerbitanNotaComponent implements OnInit {
-  data=[];
-  constructor() { }
+export class PenerbitanNotaComponent implements OnInit {   katakunci:any;   showSpinner:any;
+  data:any;
+  constructor() { 
+    this.data={};
+  }
+
+  cari(){
+    
+  };
+  
+  onSubmit(){
+
+  };
 
   ngOnInit() {
   }

@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
     selector: 'acContentHeader',
     templateUrl: './header.component.html'  
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit {   katakunci:any;   showSpinner:any;
     @Input () conf:any;
     hirarki:any;
     isHirarki:boolean;
@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
         
     }
 
-    ngOnInit() { 
+    cari(){};  onSubmit(){};   ngOnInit() { 
         if((this.conf.hirarki==null || this.conf.hirarki=='') && this.conf.hirarkiwithlink == null ){
             this.conf.name=[];
             this.isHirarkiwithlink =false;

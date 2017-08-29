@@ -5,13 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './teknis.component.html',
   styles: []
 })
-export class TeknisComponent implements OnInit {
-  data=[];
+export class TeknisComponent implements OnInit {   katakunci:any;   showSpinner:any;
+  data:any;
   constructor() { 
     this.data;
   }
 
-  ngOnInit() {
+  cari(){};  onSubmit(){};   ngOnInit() {
   }
 
 }

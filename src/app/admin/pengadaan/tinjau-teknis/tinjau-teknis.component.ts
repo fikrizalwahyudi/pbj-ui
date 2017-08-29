@@ -5,11 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './tinjau-teknis.component.html',
   styles: []
 })
-export class TinjauTeknisComponent implements OnInit {
+export class TinjauTeknisComponent implements OnInit {   katakunci:any;   showSpinner:any;
+  data:any;
+  constructor() { 
+    this.data={};
+  }
 
-  constructor() { }
-
-  ngOnInit() {
+  cari(){};  onSubmit(){};   ngOnInit() {
   }
 
   ngOnDestroy() {
