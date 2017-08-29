@@ -7,10 +7,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./kak-form.component.css']
 })
 export class KakFormComponent implements OnInit {   katakunci:any;   showSpinner:any;
-  data=[];
-  constructor(private router:Router) { }
+  data:any;
+  constructor(private router:Router) {
+    this.data='';
+  }
 
-  cari(){};   ngOnInit() {
+  cari(){
+    
+  };  
+  
+  ngOnInit() {
+
   }
 
   onSubmit(){

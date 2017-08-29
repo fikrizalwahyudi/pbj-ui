@@ -9,7 +9,7 @@ export class MainSideComponent implements OnInit {   katakunci:any;   showSpinne
 
   constructor() { }
 
-  cari(){};   ngOnInit() {
+  cari(){};  onSubmit(){};   ngOnInit() {
   }
 
 }

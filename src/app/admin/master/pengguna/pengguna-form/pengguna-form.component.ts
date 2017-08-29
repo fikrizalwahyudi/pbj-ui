@@ -8,9 +8,13 @@ import { Router } from '@angular/router';
 })
 export class PenggunaFormComponent implements OnInit {   katakunci:any;   showSpinner:any;
   data:any;
-  constructor(private router:Router) { }
+  constructor(private router:Router) {  }
+  
+  cari(){
 
-  cari(){};   ngOnInit() { 
+  };
+  
+  ngOnInit() { 
     $("#menu-master").addClass("active");
     $("#menu-pengguna").addClass("active");
   }

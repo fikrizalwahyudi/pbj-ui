@@ -17,7 +17,7 @@ export class PenggunaComponent implements OnInit {   katakunci:any;   showSpinne
 
   constructor(private router:Router) { }
 
-  cari(){};   ngOnInit() { 
+  cari(){};  onSubmit(){};   ngOnInit() { 
     $("#menu-master").addClass("active");
     $("#menu-pengguna").addClass("active");
   }

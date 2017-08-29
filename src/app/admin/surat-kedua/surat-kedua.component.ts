@@ -9,7 +9,7 @@ export class SuratKeduaComponent implements OnInit {   katakunci:any;   showSpin
 
   constructor() { }
 
-  cari(){};   ngOnInit() {
+  cari(){};  onSubmit(){};   ngOnInit() {
   }
 
 }

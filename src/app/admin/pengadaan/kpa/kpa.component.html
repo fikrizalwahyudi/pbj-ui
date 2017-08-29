@@ -15,7 +15,7 @@
                 </div>
 
                 <div style="padding:0px 60px 0px 60px" class='col-md-6'>
-                    <acSelect [(value)]="data.sifat"  [conf]="{'disabled':true,'type':'select','options':[{'val':KAA,'text':'KAB'},{'val':1,'text':'KPA II'}],'judul':'Sifat'}" ></acSelect>  
+                    <acSelect [(value)]="data.sifat"  [conf]="{'disabled':true,'type':'select','options':[{'val':'KAA','text':'KAB'},{'val':1,'text':'KPA II'}],'judul':'Sifat'}" ></acSelect>  
                     <acInput [(value)]='data.perihal' [conf]="{'readonly':true,'judul':'Perihal','required':false,'type':'number'}" ></acInput>
                     <acInput [(value)]='data.program' [conf]="{'readonly':true,'judul':'Program','required':false,'type':'number'}" ></acInput>
                     <acInput [(value)]='data.kegiatan' [conf]="{'readonly':true,'judul':'Kegiatan','required':false,'type':'number'}" ></acInput>
@@ -102,7 +102,7 @@
             </div>
             <div class="box-footer">
               <div class='text-center'>
-                <button (click)='keKak()'  style='margin: 0px 0px 0px 60px;' class="btn btn-success">Download Semua Dokumen Pengajuan</button>
+                <button  style='margin: 0px 0px 0px 60px;' class="btn btn-success">Download Semua Dokumen Pengajuan</button>
                 <button  style='margin: 0px 0px 0px 60px;' class="btn btn-success">Tolak Pengajuan</button>
                 <button  data-toggle="modal" data-target="#prosesModal" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Proses Pengajuan</button>
               </div>

@@ -15,9 +15,9 @@ export class PenyediaComponent implements OnInit {   katakunci:any;   showSpinne
   {'id':'2','namaPerusahaan':'Lanister Corp','contactPerson':'Jamie Laniester','email':'jamie@laniester.com'}
   ]
 
-  constructor(private router:Router) { }
+  constructor(private router:Router) {  }
 
-  cari(){};   ngOnInit() { 
+  cari(){};  onSubmit(){};   ngOnInit() { 
     $("#menu-master").addClass("active");
     $("#menu-penyedia").addClass("active");
   }

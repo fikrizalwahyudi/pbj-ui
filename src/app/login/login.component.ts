@@ -96,7 +96,11 @@ export class LoginComponent implements OnInit {   katakunci:any;   showSpinner:a
    
   }
 
-  cari(){};   ngOnInit() {
+  cari(){
+
+  };
+    
+  ngOnInit() {
     //Add the login-page class to the body
     //$('body').addClass(this.bodyClasses);
     this.body.classList.add(this.bodyClasses);   //add the class   

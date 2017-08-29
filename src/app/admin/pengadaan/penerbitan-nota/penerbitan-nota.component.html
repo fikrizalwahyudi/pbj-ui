@@ -15,7 +15,7 @@
                 </div>
 
                 <div style="padding:0px 60px 0px 60px" class='col-md-6'>
-                    <acSelect [(value)]="data.sifat"  [conf]="{'disabled':false,'type':'select','options':[{'val':KAA,'text':'KAB'},{'val':1,'text':'KPA II'}],'judul':'Sifat'}" ></acSelect>  
+                    <acSelect [(value)]="data.sifat"  [conf]="{'disabled':false,'type':'select','options':[{'val':'KAA','text':'KAB'},{'val':1,'text':'KPA II'}],'judul':'Sifat'}" ></acSelect>  
                     <acInput [(value)]='data.perihal' [conf]="{'readonly':false,'judul':'Perihal','required':false,'type':'number'}" ></acInput>
                     <acInput [(value)]='data.program' [conf]="{'readonly':false,'judul':'Program','required':false,'type':'number'}" ></acInput>
                     <acInput [(value)]='data.kegiatan' [conf]="{'readonly':false,'judul':'Kegiatan','required':false,'type':'number'}" ></acInput>
@@ -130,7 +130,7 @@
             </div>
             <div class="box-footer">
               <div class='text-center'>
-                <button (click)='keKak()'  style='margin: 0px 0px 0px 0px;' class="btn btn-success">Buat Undagan Pengadaan</button>
+                <button  style='margin: 0px 0px 0px 0px;' class="btn btn-success">Buat Undagan Pengadaan</button>
                 <button  style='margin: 0px 0px 0px 0px;' class="btn btn-success">Register Calon Penyedia</button>
                 <button  data-toggle="modal" data-target="#prosesModal" style='margin: 0px 0px 0px 0px;' class="btn btn-success">Reserve 1</button>
                 <button  data-toggle="modal" data-target="#prosesModal" style='margin: 0px 0px 0px 0px;' class="btn btn-success">Reserve 2</button>

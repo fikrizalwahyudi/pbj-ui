@@ -9,7 +9,7 @@ export class FooterComponent implements OnInit {   katakunci:any;   showSpinner:
 
   constructor() { }
 
-  cari(){};   ngOnInit() {
+  cari(){};  onSubmit(){};   ngOnInit() {
   }
 
 }

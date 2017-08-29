@@ -48,7 +48,7 @@ export class SelectComponent implements OnInit,AfterViewInit  {
         this.valueChange.emit(this.val);
     }
 
-    cari(){};   ngOnInit() { 
+    cari(){};  onSubmit(){};   ngOnInit() { 
         if(this.conf.query == null)
         {
             this.conf.query = {

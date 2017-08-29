@@ -9,7 +9,7 @@ export class ControlSidebarComponent implements OnInit {   katakunci:any;   show
 
   constructor() { }
 
-  cari(){};   ngOnInit() {
+  cari(){};  onSubmit(){};   ngOnInit() {
   }
 
 }

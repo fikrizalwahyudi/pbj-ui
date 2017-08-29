@@ -8,10 +8,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard1.component.css']
 })
 
-export class Dashboard1Component implements OnInit {   katakunci:any;   showSpinner:any;
+export class Dashboard1Component implements OnInit {   
   katakunci:any;
   showSpinner:any;
-  constructor(private router:Router) { }
+  constructor(private router:Router) {  }
 
   lineChart : morris.GridChart;
   areaChart : morris.GridChart;
@@ -41,7 +41,7 @@ export class Dashboard1Component implements OnInit {   katakunci:any;   showSpin
     );
   }
 
-  cari(){};   ngOnInit() {
+  ngOnInit() {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     

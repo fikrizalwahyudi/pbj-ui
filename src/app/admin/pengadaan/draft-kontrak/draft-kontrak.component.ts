@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class DraftKontrakComponent implements OnInit {   katakunci:any;   showSpinner:any;
-  data=[];
+  data:any;
   constructor() { }
 
-  cari(){};   ngOnInit() {
+  cari(){};  onSubmit(){};   ngOnInit() {
   }
 
 }

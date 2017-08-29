@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class KertasKerjaComponent implements OnInit {   katakunci:any;   showSpinner:any;
-  data=[];
-  constructor() { }
+  data:any;
+  constructor() { 
+    this.data={};
+  }
 
-  cari(){};   ngOnInit() {
+  cari(){};  onSubmit(){};   ngOnInit() {
   }
 
 }

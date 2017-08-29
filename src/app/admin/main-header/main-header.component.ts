@@ -14,7 +14,7 @@ export class MainHeaderComponent implements OnInit {   katakunci:any;   showSpin
     private router:Router
   ) {}
 
-  cari(){};   ngOnInit() {
+  cari(){};  onSubmit(){};   ngOnInit() {
   }
 
   gotoLogin(){

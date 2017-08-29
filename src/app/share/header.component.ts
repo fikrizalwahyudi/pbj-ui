@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {   katakunci:any;   showSpinner:
         
     }
 
-    cari(){};   ngOnInit() { 
+    cari(){};  onSubmit(){};   ngOnInit() { 
         if((this.conf.hirarki==null || this.conf.hirarki=='') && this.conf.hirarkiwithlink == null ){
             this.conf.name=[];
             this.isHirarkiwithlink =false;

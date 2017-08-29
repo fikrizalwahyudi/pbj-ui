@@ -11,7 +11,7 @@ export class TinjauKakComponent implements OnInit {   katakunci:any;   showSpinn
     this.data="";
    }
 
-  cari(){};   ngOnInit() {
+  cari(){};  onSubmit(){};   ngOnInit() {
   }
 
 }

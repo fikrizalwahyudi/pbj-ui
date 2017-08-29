@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class TinjauTeknisComponent implements OnInit {   katakunci:any;   showSpinner:any;
+  data:any;
+  constructor() { 
+    this.data={};
+  }
 
-  constructor() { }
-
-  cari(){};   ngOnInit() {
+  cari(){};  onSubmit(){};   ngOnInit() {
   }
 
   ngOnDestroy() {

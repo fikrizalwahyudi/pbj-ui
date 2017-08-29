@@ -7,10 +7,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./penyedia-form.component.css']
 })
 export class PenyediaFormComponent implements OnInit {   katakunci:any;   showSpinner:any;
-  data=[];
-  constructor(private router:Router) { }
+  data:any;
+  constructor(private router:Router) {  }
 
-  cari(){};   ngOnInit() { 
+  cari(){
+    
+  };     
+  
+  ngOnInit() { 
     $("#menu-master").addClass("active");
     $("#menu-penyedia").addClass("active");
   }
