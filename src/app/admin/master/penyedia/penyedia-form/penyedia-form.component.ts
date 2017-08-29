@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class PenyediaFormComponent implements OnInit {   katakunci:any;   showSpinner:any;
   data:any;
-  constructor(private router:Router) {  }
+  constructor(private router:Router) { this.data={}; }
 
   cari(){
     

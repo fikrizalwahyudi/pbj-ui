@@ -15,7 +15,7 @@ export class PegawaiComponent implements OnInit {   katakunci:any;   showSpinner
     {'id':'2','nama':'Ed Stark','gol':'Gol II','jabatan':'Jabaran II','status':1},
   ]
 
-  constructor(private router:Router) {  }
+  constructor(private router:Router) {}
 
   cari(){};   
 

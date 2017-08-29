@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class Dashboard1Component implements OnInit {   
   katakunci:any;
   showSpinner:any;
-  constructor(private router:Router) {  }
+  constructor(private router:Router) { }
 
   lineChart : morris.GridChart;
   areaChart : morris.GridChart;
