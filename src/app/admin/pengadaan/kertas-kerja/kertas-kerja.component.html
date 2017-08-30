@@ -96,15 +96,15 @@
           <h4 class="modal-title">Pembuatan Harga Perkiraan Sendiri & Spesifikasi Teknis</h4>
         </div>
         <div class="modal-body">
-            <acInput [(value)]='data.merek' [conf]="{'readonly':true,'judul':'Merk','required':false,'type':'text'}" ></acInput>
-            <acInput [(value)]='data.nama' [conf]="{'readonly':true,'judul':'Nama & Spesifikasi Teknis','required':false,'type':'text'}" ></acInput>
-            <acInput [(value)]='data.kuantitas' [conf]="{'readonly':true,'judul':'Kuantitas','required':false,'type':'number'}" ></acInput>
-            <acSelect [(value)]="data.satuan"  [conf]="{'disabled':true,'type':'select','options':[{'val':0,'text':'KG'},{'val':1,'text':'Set'}],'judul':'Satuan'}" ></acSelect> 
-            <acInput [(value)]='data.hargaSurvey1' [conf]="{'readonly':true,'judul':'Harga Survey 1','required':false,'type':'number'}" ></acInput>
-            <acInput [(value)]='data.hargaSurvey2' [conf]="{'readonly':true,'judul':'Harga Survey 2','required':false,'type':'number'}" ></acInput>
-            <acInput [(value)]='data.hargaSurvey3' [conf]="{'readonly':true,'judul':'Harga Survey 3','required':false,'type':'number'}" ></acInput>
-            <acInput [(value)]='data.hpsAwal' [conf]="{'readonly':true,'judul':'HPS Awal','required':false,'type':'number'}" ></acInput>
-            <acSelect [(value)]="data.statusPpn"  [conf]="{'disabled':true,'type':'select','options':[{'val':0,'text':'Sudah'},{'val':1,'text':'Belum'}],'judul':'Sudah atau Belum PPN'}" ></acSelect> 
+            <acInput [(value)]='data.merek' [conf]="{'judul':'Merk','required':false,'type':'text'}" ></acInput>
+            <acInput [(value)]='data.nama' [conf]="{'judul':'Nama & Spesifikasi Teknis','required':false,'type':'text'}" ></acInput>
+            <acInput [(value)]='data.kuantitas' [conf]="{'judul':'Kuantitas','required':false,'type':'number'}" ></acInput>
+            <acSelect [(value)]="data.satuan"  [conf]="{'type':'select','options':[{'val':0,'text':'KG'},{'val':1,'text':'Set'}],'judul':'Satuan'}" ></acSelect> 
+            <acInput [(value)]='data.hargaSurvey1' [conf]="{'judul':'Harga Survey 1','required':false,'type':'number'}" ></acInput>
+            <acInput [(value)]='data.hargaSurvey2' [conf]="{'judul':'Harga Survey 2','required':false,'type':'number'}" ></acInput>
+            <acInput [(value)]='data.hargaSurvey3' [conf]="{'judul':'Harga Survey 3','required':false,'type':'number'}" ></acInput>
+            <acInput [(value)]='data.hpsAwal' [conf]="{'judul':'HPS Awal','required':false,'type':'number'}" ></acInput>
+            <acSelect [(value)]="data.statusPpn"  [conf]="{'type':'select','options':[{'val':0,'text':'Sudah'},{'val':1,'text':'Belum'}],'judul':'Sudah atau Belum PPN'}" ></acSelect> 
             ...
         </div>
         <div class="modal-footer">

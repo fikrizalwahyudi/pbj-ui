@@ -11,7 +11,7 @@ export class AdminComponent implements OnInit {   katakunci:any;   showSpinner:a
   
   constructor() { }
 
-  cari(){};  onSubmit(){};   ngOnInit() {
+  cari(){};  onSubmit(){alert('Masih Dalam Proses Pengembangan');};   ngOnInit() {
     //add the the body classes
     this.body.classList.add("skin-blue");
     this.body.classList.add("sidebar-mini");

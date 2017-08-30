@@ -18,6 +18,6 @@ export class KpaComponent implements OnInit {   katakunci:any;   showSpinner:any
   }
   
   onSubmit(){
-
+    alert('Masih Dalam Proses Pengembangan');
   }
 }

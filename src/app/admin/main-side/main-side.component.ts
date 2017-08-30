@@ -9,7 +9,7 @@ export class MainSideComponent implements OnInit {   katakunci:any;   showSpinne
 
   constructor() { }
 
-  cari(){};  onSubmit(){};   ngOnInit() {
+  cari(){};  onSubmit(){alert('Masih Dalam Proses Pengembangan');};   ngOnInit() {
   }
 
 }

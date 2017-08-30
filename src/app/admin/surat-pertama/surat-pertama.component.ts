@@ -9,7 +9,7 @@ export class SuratPertamaComponent implements OnInit {   katakunci:any;   showSp
 
   constructor() { }
 
-  cari(){};  onSubmit(){};   ngOnInit() {
+  cari(){};  onSubmit(){alert('Masih Dalam Proses Pengembangan');};   ngOnInit() {
   }
 
 }

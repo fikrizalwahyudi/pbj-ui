@@ -5,18 +5,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './penerbitan-nota.component.html',
   styles: []
 })
-export class PenerbitanNotaComponent implements OnInit {   katakunci:any;   showSpinner:any;
-  data:any;
-  constructor() { 
-    this.data={};
+export class PenerbitanNotaComponent implements OnInit {
+  katakunci: any; showSpinner: any;
+  data: any;
+  constructor() {
+    this.data = {};
   }
 
-  cari(){
-    
-  };
-  
-  onSubmit(){
+  cari() {
 
+  };
+
+  onSubmit() {
+    alert('Masih Dalam Proses Pengembangan');
   };
 
   ngOnInit() {

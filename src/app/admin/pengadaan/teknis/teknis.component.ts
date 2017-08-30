@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class TeknisComponent implements OnInit {   katakunci:any;   showSpinner:any;
   data:any;
   constructor() { 
-    this.data;
+    this.data={};
   }
 
-  cari(){};  onSubmit(){};   ngOnInit() {
+  cari(){};  onSubmit(){alert('Masih Dalam Proses Pengembangan');};   ngOnInit() {
   }
 
 }

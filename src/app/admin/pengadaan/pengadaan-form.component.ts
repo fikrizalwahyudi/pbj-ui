@@ -12,7 +12,15 @@ export class PengadaanFormComponent implements OnInit {   katakunci:any;   showS
     this.data={};
   }
 
-  cari(){};  onSubmit(){};   ngOnInit() { 
+  cari(){
+
+  };
+
+  onSubmit(){
+    alert('Masih Dalam Proses Pengembangan');
+  }; 
+  
+  ngOnInit() { 
     $("#menu-penangging").addClass("active");
     $("#menu-pengadaan").addClass("active");
   }
@@ -28,5 +36,4 @@ export class PengadaanFormComponent implements OnInit {   katakunci:any;   showS
   keKak(){
     this.router.navigateByUrl('admin/kakForm')
   }
-
 }

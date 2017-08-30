@@ -105,9 +105,9 @@
                 <button   style='margin: 0px 0px 0px 0px;' class="btn btn-sm btn-success">Buat kertas HPS & Spesifikasi Teknis </button>
                 <button  style='margin: 0px 0px 0px 0px;' class="btn btn-sm btn-success">Buat Draft Kontrak</button>
                 <button  style='margin: 0px 0px 0px 0px;' class="btn btn-sm btn-success">Reserve Button</button>
-                <button  data-toggle="modal" data-target="#prosesModal" style='margin: 0px 0px 0px 0px;' class="btn btn-sm btn-success">Tinjau & Perbaharui Dokumen Teknis</button>
-                <button  data-toggle="modal" data-target="#prosesModal" style='margin: 0px 0px 0px 0px;' class="btn btn-sm btn-success">Tinjau & Perbaharui KAK</button>
-                <button  data-toggle="modal" data-target="#prosesModal" style='margin: 0px 0px 0px 0px;' class="btn btn-sm btn-success">Proses Pengajuan</button>
+                <a  data-toggle="modal" data-target="#prosesModal" style='margin: 0px 0px 0px 0px;' class="btn btn-sm btn-success">Tinjau & Perbaharui Dokumen Teknis</a>
+                <button  data-toggle="modal"  style='margin: 0px 0px 0px 0px;' class="btn btn-sm btn-success">Tinjau & Perbaharui KAK</button>
+                <button  data-toggle="modal"  style='margin: 0px 0px 0px 0px;' class="btn btn-sm btn-success">Proses Pengajuan</button>
               </div>
             </div>
         </form>
@@ -128,7 +128,7 @@
         </div>
         <div class="modal-body">
             <acInput [(value)]='data.noIdPengadaan' [conf]="{'readonly':true,'judul':'No ID Pengadaan','required':false,'type':'text'}" ></acInput>
-            <acSelect [(value)]="data.kepada"  [conf]="{'disabled':true,'type':'select','options':[{'val':0,'text':'KPA 1'},{'val':1,'text':'KPA II'}],'judul':'Kepada'}" ></acSelect> 
+            <acSelect [(value)]="data.kepada"  [conf]="{'type':'select','options':[{'val':0,'text':'KPA 1'},{'val':1,'text':'KPA II'}],'judul':'Kepada'}" ></acSelect> 
         </div>
         <div class="modal-footer">
             <button data-toggle="modal" data-target="#prosesModal"   type="submit" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Terbitkan Nota Ke PPK</button>

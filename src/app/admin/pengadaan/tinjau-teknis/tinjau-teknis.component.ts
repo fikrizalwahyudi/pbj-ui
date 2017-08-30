@@ -11,7 +11,7 @@ export class TinjauTeknisComponent implements OnInit {   katakunci:any;   showSp
     this.data={};
   }
 
-  cari(){};  onSubmit(){};   ngOnInit() {
+  cari(){};  onSubmit(){alert('Masih Dalam Proses Pengembangan');};   ngOnInit() {
   }
 
   ngOnDestroy() {

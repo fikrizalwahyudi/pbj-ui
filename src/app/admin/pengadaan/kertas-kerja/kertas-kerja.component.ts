@@ -11,7 +11,7 @@ export class KertasKerjaComponent implements OnInit {   katakunci:any;   showSpi
     this.data={};
   }
 
-  cari(){};  onSubmit(){};   ngOnInit() {
+  cari(){};  onSubmit(){alert('Masih Dalam Proses Pengembangan');};   ngOnInit() {
   }
 
 }

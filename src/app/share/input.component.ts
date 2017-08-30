@@ -36,7 +36,7 @@ export class InputComponent implements OnInit,AfterViewInit  {
         this.valueChange.emit(this.val);
     }
 
-    cari(){};  onSubmit(){};   ngOnInit() { 
+    cari(){};  onSubmit(){alert('Masih Dalam Proses Pengembangan');};   ngOnInit() { 
         if(this.conf.type==null){
             this.conf.type='text';
         }

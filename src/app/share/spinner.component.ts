@@ -19,5 +19,5 @@ export class SpinnerComponent implements OnInit {   katakunci:any;   showSpinner
 
     constructor() { }
 
-    cari(){};  onSubmit(){};   ngOnInit() { }
+    cari(){};  onSubmit(){alert('Masih Dalam Proses Pengembangan');};   ngOnInit() { }
 }

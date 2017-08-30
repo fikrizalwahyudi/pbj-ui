@@ -17,7 +17,7 @@ export class PenyediaComponent implements OnInit {   katakunci:any;   showSpinne
 
   constructor(private router:Router) { }
 
-  cari(){};  onSubmit(){};   ngOnInit() { 
+  cari(){};  onSubmit(){alert('Masih Dalam Proses Pengembangan');};   ngOnInit() { 
     $("#menu-master").addClass("active");
     $("#menu-penyedia").addClass("active");
   }

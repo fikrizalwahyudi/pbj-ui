@@ -16,7 +16,7 @@ export class PpkComponent implements OnInit {   katakunci:any;   showSpinner:any
   };
 
   onSubmit(){
-
+    alert('Masih Dalam Proses Pengembangan');
   };
   
   ngOnInit() {
