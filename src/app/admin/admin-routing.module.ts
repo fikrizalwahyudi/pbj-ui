@@ -33,8 +33,8 @@ import { PenerbitanNotaComponent } from './pengadaan/penerbitan-nota/penerbitan-
         children: [
             { path:'', component: Dashboard1Component },
             { path:'dashboard', component: Dashboard1Component },
-            { path:'laporan1', component: Dashboard1Component },
-            { path:'laporan2', component: Dashboard1Component },
+            { path:'laporan1', component: SuratPertamaComponent },
+            { path:'laporan2', component: SuratKeduaComponent },
             { path:'surat1', component: SuratPertamaComponent },
             { path:'surat2', component: SuratKeduaComponent },
             { path:'pengguna', component: PenggunaComponent },

@@ -20,7 +20,11 @@ import 'rxjs/add/operator/catch';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {   katakunci:any;   showSpinner:any;
+export class LoginComponent implements OnInit {   
+  username='admin@kpu.com';
+  password='admin123';
+  katakunci:any;   
+  showSpinner:any;
   
   bodyClasses:string = "login-page";
   body = document.getElementsByTagName('body')[0];
@@ -34,9 +38,6 @@ export class LoginComponent implements OnInit {   katakunci:any;   showSpinner:a
   cValue: string;
   rName: string;
   checkName: string;
-
-  username:string;
-  password:string;
 
   constructor(
     private apiService:ApiService,
