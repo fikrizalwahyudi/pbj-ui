@@ -9,38 +9,38 @@ import { FormsModule } from '@angular/forms';
 import { Http, BaseRequestOptions } from '@angular/http';
 
 describe('PenyediaFormComponent', () => {
-  let component: PenyediaFormComponent;
-  let fixture: ComponentFixture<PenyediaFormComponent>;
+	let component: PenyediaFormComponent;
+	let fixture: ComponentFixture<PenyediaFormComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ PenyediaFormComponent ],
-      imports: [
-        ShareModule,
-        FormsModule,
-        RouterTestingModule
-      ],
-      providers: [
-        {
-          provide: Http, useFactory:(backend, options) => {
-            return new Http(backend, options);
-          },
-          deps: [MockBackend, BaseRequestOptions]
-        },
-        MockBackend,
-        BaseRequestOptions
-      ]
-    })
-    .compileComponents();
-  }));
+	beforeEach(async(() => {
+		TestBed.configureTestingModule({
+			declarations: [PenyediaFormComponent],
+			imports: [
+				ShareModule,
+				FormsModule,
+				RouterTestingModule
+			],
+			providers: [
+				{
+					provide: Http, useFactory: (backend, options) => {
+						return new Http(backend, options);
+					},
+					deps: [MockBackend, BaseRequestOptions]
+				},
+				MockBackend,
+				BaseRequestOptions
+			]
+		})
+			.compileComponents();
+	}));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(PenyediaFormComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+	beforeEach(() => {
+		fixture = TestBed.createComponent(PenyediaFormComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('should be created', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should be created', () => {
+		expect(component).toBeTruthy();
+	});
 });

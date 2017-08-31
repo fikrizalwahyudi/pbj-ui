@@ -1,21 +1,26 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+/* tslint:disable:no-unused-variable */
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { By } from '@angular/platform-browser';
+import { DebugElement } from '@angular/core';
 
-import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
+import { CommonModule } from '@angular/common';
+import { ShareModule } from '../share/share.module';
+import { FormsModule } from '@angular/forms';
+import { ControlSidebarComponent } from './control-sidebar/control-sidebar.component';
 import { MainSideComponent } from './main-side/main-side.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ControlSidebarComponent } from './control-sidebar/control-sidebar.component';
+import { AppRoutingModule } from '../app-routing.module';
+import { AdminRoutingModule } from './admin-routing.module';
 import { Dashboard1Component } from './dashboard1/dashboard1.component';
-import { ShareModule } from '../share/share.module';
 import { SuratPertamaComponent } from './surat-pertama/surat-pertama.component';
 import { SuratKeduaComponent } from './surat-kedua/surat-kedua.component';
 import { PenggunaComponent } from './master/pengguna/pengguna.component';
 import { PegawaiComponent } from './master/pegawai/pegawai.component';
 import { PenyediaComponent } from './master/penyedia/penyedia.component';
 import { ProfileComponent } from './profile/profile.component';
-import { FormsModule } from '@angular/forms';
 import { PenggunaFormComponent } from './master/pengguna/pengguna-form/pengguna-form.component';
 import { PegawaiFormComponent } from './master/pegawai/pegawai-form/pegawai-form.component';
 import { PenyediaFormComponent } from './master/penyedia/penyedia-form/penyedia-form.component';
@@ -30,41 +35,60 @@ import { KertasKerjaComponent } from './pengadaan/kertas-kerja/kertas-kerja.comp
 import { DraftKontrakComponent } from './pengadaan/draft-kontrak/draft-kontrak.component';
 import { PenerbitanNotaComponent } from './pengadaan/penerbitan-nota/penerbitan-nota.component';
 
+import { APP_BASE_HREF } from '@angular/common';
 
-@NgModule({
-  imports: [
-    CommonModule,
-    AdminRoutingModule,
-    ShareModule,
-    FormsModule
-  ],
-  declarations: [
-    AdminComponent, 
-    MainSideComponent, 
-    MainHeaderComponent, 
-    FooterComponent, 
-    ControlSidebarComponent, 
-    Dashboard1Component, 
-    SuratPertamaComponent, 
-    SuratKeduaComponent, 
-    PenggunaComponent, 
-    PegawaiComponent, 
-    PenyediaComponent, 
-    ProfileComponent, 
-    PenggunaFormComponent, 
-    PegawaiFormComponent, 
-    PenyediaFormComponent, 
-    PengadaanFormComponent, 
-    KakFormComponent, 
-    KpaComponent, 
-    PpkComponent, 
-    TeknisComponent, 
-    TinjauKakComponent, 
-    TinjauTeknisComponent, 
-    KertasKerjaComponent, 
-    DraftKontrakComponent, 
-    PenerbitanNotaComponent
-  ],
-  exports: [AdminComponent]
-})
-export class AdminModule { }
+describe('AdminComponent', () => {
+	let component: AdminComponent;
+	let fixture: ComponentFixture<AdminComponent>;
+
+	beforeEach(async(() => {
+		TestBed.configureTestingModule({
+			declarations: [
+				AdminComponent,
+				MainSideComponent,
+				MainHeaderComponent,
+				FooterComponent,
+				ControlSidebarComponent,
+				Dashboard1Component,
+				SuratPertamaComponent,
+				SuratKeduaComponent,
+				PenggunaComponent,
+				PegawaiComponent,
+				PenyediaComponent,
+				ProfileComponent,
+				PenggunaFormComponent,
+				PegawaiFormComponent,
+				PenyediaFormComponent,
+				PengadaanFormComponent,
+				KakFormComponent,
+				KpaComponent,
+				PpkComponent,
+				TeknisComponent,
+				TinjauKakComponent,
+				TinjauTeknisComponent,
+				KertasKerjaComponent,
+				DraftKontrakComponent,
+				PenerbitanNotaComponent
+			],
+			imports: [
+				CommonModule,
+				ShareModule,
+				FormsModule,
+				AdminRoutingModule,
+				RouterTestingModule
+			],
+
+		})
+			.compileComponents();
+	}));
+
+	beforeEach(() => {
+		fixture = TestBed.createComponent(AdminComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
+
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
+});
