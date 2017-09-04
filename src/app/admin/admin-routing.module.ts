@@ -25,6 +25,7 @@ import { DraftKontrakComponent } from './pengadaan/draft-kontrak/draft-kontrak.c
 import { PenerbitanNotaComponent } from './pengadaan/penerbitan-nota/penerbitan-nota.component';
 import { DraftPenyediaComponent } from './pengadaan/draft-penyedia/draft-penyedia.component';
 import { PelaksanaanPengadaanComponent } from './pengadaan/pelaksanaan-pengadaan/pelaksanaan-pengadaan.component';
+import { LdpComponent } from './pengadaan/ldp/ldp.component';
 
 // canActivate:[AuthGuard]
 @NgModule({
@@ -59,6 +60,7 @@ import { PelaksanaanPengadaanComponent } from './pengadaan/pelaksanaan-pengadaan
           { path: 'penerbitanNota', component: PenerbitanNotaComponent },
           { path: 'draftPenyedia', component: DraftPenyediaComponent },
           { path: 'pelaksaanPengadaan', component: PelaksanaanPengadaanComponent },
+          { path: 'ldp', component: LdpComponent },
         ]
       }
     ])
