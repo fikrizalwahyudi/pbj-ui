@@ -29,6 +29,8 @@ import { TinjauTeknisComponent } from './pengadaan/tinjau-teknis/tinjau-teknis.c
 import { KertasKerjaComponent } from './pengadaan/kertas-kerja/kertas-kerja.component';
 import { DraftKontrakComponent } from './pengadaan/draft-kontrak/draft-kontrak.component';
 import { PenerbitanNotaComponent } from './pengadaan/penerbitan-nota/penerbitan-nota.component';
+import { DraftPenyediaComponent } from './pengadaan/draft-penyedia/draft-penyedia.component';
+import { PelaksanaanPengadaanComponent } from './pengadaan/pelaksanaan-pengadaan/pelaksanaan-pengadaan.component';
 
 
 @NgModule({
@@ -44,7 +46,7 @@ import { PenerbitanNotaComponent } from './pengadaan/penerbitan-nota/penerbitan-
     MainHeaderComponent, 
     FooterComponent, 
     ControlSidebarComponent, 
-    Dashboard1Component, SuratPertamaComponent, SuratKeduaComponent, PenggunaComponent, PegawaiComponent, PenyediaComponent, ProfileComponent, PenggunaFormComponent, PegawaiFormComponent, PenyediaFormComponent, PengadaanFormComponent, KakFormComponent, KpaComponent, PpkComponent, TeknisComponent, TinjauKakComponent, TinjauTeknisComponent, KertasKerjaComponent, DraftKontrakComponent, PenerbitanNotaComponent
+    Dashboard1Component, SuratPertamaComponent, SuratKeduaComponent, PenggunaComponent, PegawaiComponent, PenyediaComponent, ProfileComponent, PenggunaFormComponent, PegawaiFormComponent, PenyediaFormComponent, PengadaanFormComponent, KakFormComponent, KpaComponent, PpkComponent, TeknisComponent, TinjauKakComponent, TinjauTeknisComponent, KertasKerjaComponent, DraftKontrakComponent, PenerbitanNotaComponent, DraftPenyediaComponent, PelaksanaanPengadaanComponent
   ],
   exports: [AdminComponent]
 })

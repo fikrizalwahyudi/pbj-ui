@@ -1,0 +1,253 @@
+<acContentHeader [conf]="{'judul':'Pengadaan','subJudul':'Form Pengadaan','hirarki':['Pejabat Pengadaan','Proses Pengadaan Barang & Jasa','Penyedia Barang & Jasa','NO Id Pengadaan']}"></acContentHeader>
+
+
+
+<section class="content">
+  <div class="box box-success">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Custom Tabs -->
+        <div class="nav-tabs-custom">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab_1" data-toggle="tab">Pengadaan Pelaksanaan</a></li>
+            <li><a href="#tab_2" data-toggle="tab">Undangan Pelaksanaan</a></li>
+            <li><a href="#tab_3" data-toggle="tab">Undangan Klarifikasi</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tab_1">
+              <form role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+                <div class="box-body chat" id="chat-box">
+                  <div style="padding:0px 60px 0px 60px" class='col-md-6'>
+                    <acSelect [(value)]="data.requestor" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'Requestor A'},{'val':1,'text':'Requestor B'}],'judul':'Requestor'}"></acSelect>
+                    <acInput [(value)]='data.alamat' [conf]="{'readonly':false,'judul':'Tempat & Alamat','required':false}"></acInput>
+                    <acInput [(value)]='data.telepon' [conf]="{'readonly':false,'judul':'Telepon','required':false}"></acInput>
+                    <acInput [(value)]='data.Website' [conf]="{'readonly':false,'judul':'Website','required':false}"></acInput>
+                  </div>
+
+                  <div style="padding:0px 60px 0px 60px" class='col-md-6'>
+                    <acInput [(value)]='data.Website' [conf]="{'readonly':false,'judul':'a. Pemasukan Dokumen Penawaran','required':false,'type':'dateFromTo'}"></acInput>
+                    <acInput [(value)]='data.Website' [conf]="{'readonly':false,'judul':'b. Evaluasi Dokumen','required':false,'type':'dateFromTo'}"></acInput>
+                    <acInput [(value)]='data.Website' [conf]="{'readonly':false,'judul':'c. Penandatangan SPK','required':false,'type':'dateFromTo'}"></acInput>
+                    <acInput [(value)]='data.tglDibuat' [conf]="{'readonly':false,'judul':'Tgl Di buat','required':false,'type':'date'}"></acInput>
+                    <div class='col-md-6'>
+                      <a class="btn btn-sm btn-success">Perbaharui</a>
+                    </div>
+                    <div class='col-md-6'>
+                      <button class="btn btn-sm btn-success">Simpan</button>
+                    </div>
+                  </div>
+                  <div class='col-md-12'>
+                    <h3 class="box-title pull-right"> <a href="javascript: void(0);" class="btn btn-link margin-inline" data-toggle="modal" data-target="#penyediaModal">Tambah / Tunjuk Penyedia >></a></h3>
+                  </div>
+                  <div class="box-body chat" id="chat-box" style="overflow-x: scroll;">
+                    <table style="padding:0px 60px 0px 60px; background-color:lightblue;" class='table table-striped col-md-12 text-center'>
+                      <tr>
+                        <th>Id Penyedia</th>
+                        <th>Nama Penyedia</th>
+                        <th>Alamat</th>
+                        <th>Nama Cp</th>
+                        <th>Telepon</th>
+                        <th colspan="6">Action</th>
+                      </tr>
+                      <tr>
+                        <td>VN0001</td>
+                        <td>CV A Berantas</td>
+                        <td>Jln. Jauh No 4 </td>
+                        <td>Lyana Martel</td>
+                        <td>08121123311</td>
+                        <td><button class="btn btn-xs btn-success">Buat Undangan</button></td>
+                        <td><a data-toggle="modal" data-target="#penawaranModal" class="btn btn-xs btn-success">Upload Penawaran</a></td>
+                        <td><button class="btn btn-xs btn-success">Preview Penawaran</button></td>
+                        <td><a data-toggle="modal" data-target="#klarifikasiModal" class="btn btn-xs btn-success">Buat Undangan Klarifikasi Harga</a></td>
+                        <td><a data-toggle="modal" data-target="#baModal" class="btn btn-xs btn-success">Buat BA Klarifikasi Harga</a></td>
+                        <td><button class="btn btn-xs btn-danger">Delete</button></td>
+                      </tr>
+                      <tr>
+                        <td>VN0002</td>
+                        <td>CV B Angkara</td>
+                        <td>Jln. Santai No 2 </td>
+                        <td>Sansa Stark</td>
+                        <td>081711391231</td>
+                        <td><button class="btn btn-xs btn-success">Buat Undangan</button></td>
+                        <td><a data-toggle="modal" data-target="#penawaranModal" class="btn btn-xs btn-success">Upload Penawaran</a></td>
+                        <td><button class="btn btn-xs btn-success">Preview Penawaran</button></td>
+                        <td><a data-toggle="modal" data-target="#klarifikasiModal" class="btn btn-xs btn-success">Buat Undangan Klarifikasi Harga</a></td>
+                        <td><a data-toggle="modal" data-target="#baModal" class="btn btn-xs btn-success">Buat BA Klarifikasi Harga</a></td>
+                        <td><button class="btn btn-xs btn-danger">Delete</button></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </form>
+
+            </div>
+            <!-- /.tab-pane -->
+            <div class="tab-pane" id="tab_2">
+
+            </div>
+            <!-- /.tab-pane -->
+            <div class="tab-pane" id="tab_3">
+
+            </div>
+            <!-- /.tab-pane -->
+          </div>
+          <!-- /.tab-content -->
+        </div>
+        <!-- nav-tabs-custom -->
+      </div>
+      <!-- /.col -->
+    </div>
+
+  </div>
+</section>
+<!-- Modal -->
+<div id="prosesModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <form style="padding:20px" role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Tambah Detail Akun Pengadaan</h4>
+        </div>
+        <div class="modal-body">
+          <acInput [(value)]='data.noIdPengadaan' [conf]="{'readonly':false,'judul':'No ID Pengadaan','required':false,'type':'text'}"></acInput>
+          <acSelect [(value)]="data.kepada" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'KPA 1'},{'val':1,'text':'KPA II'}],'judul':'Kepada'}"></acSelect>
+        </div>
+        <div class="modal-footer">
+          <button data-toggle="modal" data-target="#prosesModal" type="submit" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Terbitkan Nota Ke PPK</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+<!-- Modal -->
+<div id="penyediaModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <form style="padding:20px" role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Tambah Penyedia</h4>
+        </div>
+        <div class="modal-body">
+          <div class="input-group input-group-sm pull-right">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-info btn-flat">Search</button>
+            </span>
+          </div>
+          <table style="padding:0px 60px 0px 60px; background-color:lightblue;" class='table table-striped col-md-12 text-center'>
+            <tr>
+              <th>Id Penyedia</th>
+              <th>Nama Penyedia</th>
+              <th>Nama Cp</th>
+              <th>Keterangan</th>
+              <th>Action</th>
+            </tr>
+            <tr>
+              <td>VN0001</td>
+              <td>CV A Berantas</td>
+              <td>Lyana Martel</td>
+              <td>Penyedia Dragon Glass</td>
+              <td><button class="btn btn-xs btn-warning">Pilih</button></td>
+            </tr>
+            <tr>
+              <td>VN0002</td>
+              <td>CV B Angkara</td>
+              <td>Sansa Stark</td>
+              <td>Penyedia Valerian Stell</td>
+              <td><button class="btn btn-xs btn-warning">Pilih</button></td>
+            </tr>
+            <tr>
+              <td>VN0003</td>
+              <td>CV B Murka</td>
+              <td>Jon Snow</td>
+              <td>Penyedia Valerian Stell</td>
+              <td><button class="btn btn-xs btn-warning">Pilih</button></td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <a data-toggle="modal" onclick="$('#penyediaModal').modal('hide');" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Kembali</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="penawaranModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <form style="padding:20px" role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Upload Dokumen Penawaran</h4>
+        </div>
+        <div class="modal-body">
+            <input type="file" (change)="onChange($event)"/>
+        </div>
+        <div class="modal-footer">
+          <a data-toggle="modal" onclick="$('#penawaranModal').modal('hide');" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Kembali</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="klarifikasiModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <form style="padding:20px" role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Form Klarifikasi Harga</h4>
+        </div>
+        <div class="modal-body">
+          <acSelect [(value)]="data.requestor" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'Requestor A'},{'val':1,'text':'Requestor B'}],'judul':'Requestor'}"></acSelect>
+          <acInput [(value)]='data.tanggal' [conf]="{'readonly':false,'judul':'Tanggal','required':false,'type':'date'}"></acInput>
+          <acInput [(value)]='data.jam' [conf]="{'readonly':false,'judul':'Pukul','required':false,'type':'time'}"></acInput>
+          <acInput [(value)]='data.tempat' [conf]="{'readonly':false,'judul':'Tempat','required':false,'type':'text'}"></acInput>
+          <acInput [(value)]='data.acara' [conf]="{'readonly':false,'judul':'Acara','required':false,'type':'text'}"></acInput>
+        </div>
+        <div class="modal-footer">
+          <a data-toggle="modal" onclick="$('#klarifikasiModal').modal('hide');" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Kembali</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="baModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <form style="padding:20px" role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">BA Klarifikasi & Negosiasi Harga [No Id Pengadaan]</h4>
+        </div>
+        <div class="modal-body">
+          <acSelect [(value)]="data.penyedia" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'Penyedia A'},{'val':1,'text':'Penyedia B'}],'judul':'Penyedia'}"></acSelect>
+          <acSelect [(value)]="data.pejabat" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'Pejabat A'},{'val':1,'text':'Pejabat B'}],'judul':'Pejabat Pengadaan'}"></acSelect>
+          <acInput [(value)]='data.tanggal' [conf]="{'readonly':false,'judul':'Tanggal','required':false,'type':'date'}"></acInput>
+          <acInput [(value)]='data.ha' [conf]="{'readonly':false,'judul':'Harga Awal','required':false,'type':'number'}"></acInput>
+          <acInput [(value)]='data.hak' [conf]="{'readonly':false,'judul':'Harga Akhir','required':false,'type':'number'}"></acInput>
+          <acInput [(value)]='data.aa' [conf]="{'readonly':false,'judul':'Tanggal Pelaksanaan','required':false,'type':'date'}"></acInput>
+        </div>
+        <div class="modal-footer">
+          <button data-toggle="modal" onclick="$('#baModal').modal('hide');" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Simpan & Cetak</button>
+          <button data-toggle="modal" onclick="$('#baModal').modal('hide');" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Perbaharui</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,12 +1,28 @@
-
-
 <div *ngIf="conf.type!=='submit'"  class="form-group row">
     <label>{{conf.judul}}</label> <input *ngIf="conf.type=='text'"  [(ngModel)]="value" id='{{conf.id}}' type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [readonly]="conf.readonly" [required]='conf.required'>
     <input *ngIf="conf.type=='password'" [readonly]="conf.readonly"  [(ngModel)]="value" id='{{conf.id}}' type='password'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required' >
     <input *ngIf="conf.type=='number'" [(ngModel)]="value" id='{{conf.id}}' type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [readonly]="conf.readonly" [required]='conf.required'  disabled='{{conf.disabled}}'>
     <input *ngIf="conf.type=='email'"  [(ngModel)]="value" id='{{conf.id}}'  type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [readonly]="conf.readonly" disabled='{{conf.disabled}}' pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" [required]='conf.required' email>
     <input *ngIf="conf.type=='date'" [readonly]="conf.readonly" [(ngModel)]="value" id='{{conf.id}}'  type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required'>
+    <input *ngIf="conf.type=='time'" [readonly]="conf.readonly" [(ngModel)]="value" id='{{conf.id}}'  type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required'>
+    <div *ngIf="conf.type=='dateFromTo'" >
+        <div class='row'>
+            <div class='col-md-1'>
+                From
+            </div>
+            <div class='col-md-5'>
+                <input  [readonly]="conf.readonly" [(ngModel)]="valuef" id='{{conf.idf}}'  type='date'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required'>
+            </div>
+            <div class='col-md-1'>
+                To
+            </div>
+            <div class='col-md-5'>
+                <input  [readonly]="conf.readonly" [(ngModel)]="valued" id='{{conf.idt}}'  type='date'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required'>
+            </div>
+        </div>
+    </div>
     <textarea *ngIf="conf.type=='textarea'"  [(ngModel)]="value" id='{{conf.id}}'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required' [readonly]="conf.readonly">  </textarea>
+</div>
 
     <!-- <div class="col-md-3">
         <label class="form-control-label" for="l6">{{conf.judul}}</label>
@@ -17,7 +33,6 @@
             <input *ngIf="conf.type=='password'"  [(ngModel)]="value" id='{{conf.id}}' type='password'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required' >
         </div>
     </div> -->
-</div>
 <!-- <div *ngIf="conf.type=='password'" class="form-group">
     <label>{{conf.judul}}</label>
     <input  [(ngModel)]="value" id='{{conf.id}}' type='password'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required' >
