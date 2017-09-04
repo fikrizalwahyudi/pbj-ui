@@ -2,7 +2,7 @@ import { NgModule, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { AdminComponent } from './admin.component';
-import { Dashboard1Component } from './dashboard1/dashboard1.component';
+import { Dashboard1Component } from './dashboard/dashboard.component';
 import { AuthGuard } from '../library/_guards/auth.guards';
 import { SuratPertamaComponent } from './surat-pertama/surat-pertama.component';
 import { SuratKeduaComponent } from './surat-kedua/surat-kedua.component';
