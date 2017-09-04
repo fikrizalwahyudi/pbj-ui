@@ -34,9 +34,9 @@
                     <th>Requestror</th>
                     <th>Tanggal Pengajuan</th>
                     <th>Sifat</th>
-                    <th>Status Pengadaan</th>
-                    <th>Akun</th>
-                    <th class="text-center">STATUS</th>
+                    <!-- <th>Akun</th> -->
+                    <!-- <th class="text-center">STATUS</th> -->
+                    <th class="text-center">Status Pengadaan</th>
                     <th colspan="2" class="text-center">AKSI</th>
                 </tr>
                 <tr *ngFor="let data of data; let i=index">
@@ -45,16 +45,18 @@
                     <td>{{data.requestor}}</td>
                     <td>{{data.tglPengajuan}}</td>
                     <td>{{data.sifat}}</td>
-                    <td>{{data.statusPengadaan}}</td>
-                    <td>{{data.akun}}</td>
-                    <!-- <td>{{data.identitas.status}}</td> -->
                     <td class="text-center">
+                        <span class="badge label-success">{{data.statusPengadaan}}</span>
+                    </td>
+                    <!-- <td>{{data.akun}}</td> -->
+                    <!-- <td>{{data.identitas.status}}</td> -->
+                    <!-- <td class="text-center">
                         <span *ngIf="data.status==1" class="badge label-success">Aktif</span>
                         <span *ngIf="data.status!=1" class="badge label-danger">Tidak Aktif</span>
-                    </td>
+                    </td> -->
                     <td width="10px">
-                        <button type="button" class="btn btn-info btn-xs" (click)="edit(data.idPelanggan)">
-                            <i class="fa fa-edit"></i> Edit
+                        <button type="button" class="btn btn-warning btn-xs" (click)="edit(data.idPelanggan)">
+                            <i class="fa fa-external-link-square"></i> Lanjut
                         </button>
                     </td>
                     <td width="10px">

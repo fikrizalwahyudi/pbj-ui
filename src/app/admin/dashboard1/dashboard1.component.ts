@@ -50,7 +50,20 @@ export class Dashboard1Component implements OnInit {
   tambah(){
     this.router.navigateByUrl('admin/pengadaanForm')
   }
+
   cari(){
 
+  }
+
+  edit(id){
+    this.alert();
+  }
+
+  hapus(id){
+    this.alert();
+  }
+
+  alert() {
+    alert('Masih Dalam Proses Pengembangan');
   }
 }
