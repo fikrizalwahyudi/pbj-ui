@@ -7,7 +7,7 @@ import { MainSideComponent } from './main-side/main-side.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ControlSidebarComponent } from './control-sidebar/control-sidebar.component';
-import { Dashboard1Component } from './dashboard1/dashboard1.component';
+import { Dashboard1Component } from './dashboard/dashboard.component';
 import { ShareModule } from '../share/share.module';
 import { SuratPertamaComponent } from './surat-pertama/surat-pertama.component';
 import { SuratKeduaComponent } from './surat-kedua/surat-kedua.component';
