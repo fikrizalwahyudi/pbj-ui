@@ -5,6 +5,7 @@
     <input *ngIf="conf.type=='email'"  [(ngModel)]="value" id='{{conf.id}}'  type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [readonly]="conf.readonly" disabled='{{conf.disabled}}' pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" [required]='conf.required' email>
     <input *ngIf="conf.type=='date'" [readonly]="conf.readonly" [(ngModel)]="value" id='{{conf.id}}'  type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required'>
     <input *ngIf="conf.type=='time'" [readonly]="conf.readonly" [(ngModel)]="value" id='{{conf.id}}'  type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required'>
+    <input *ngIf="conf.type=='datetime-local'" [readonly]="conf.readonly" [(ngModel)]="value" id='{{conf.id}}'  type='{{conf.type}}'  class="form-control" placeholder="{{conf.placeholder}}" [required]='conf.required'>
     <input *ngIf="conf.type=='file'" id='{{conf.id}}' type="{{conf.type}}" placeholder="Input File" accept="{{conf.accept}}">
     <div *ngIf="conf.type=='dateFromTo'" >
         <div class='row'>

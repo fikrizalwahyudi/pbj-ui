@@ -1,113 +1,53 @@
-<acContentHeader [conf]="{'judul':'Pelaksanaan Pengadaan','subJudul':'Form Pengadaan','hirarki':['Pejabat Pengadaan','Proses Pengadaan Barang & Jasa','Penyedia Barang & Jasa','NO Id Pengadaan']}"></acContentHeader>
-
-
+<acContentHeader [conf]="{'judul':'Pengadaan','subJudul':'Form Pengadaan','hirarki':['Pejabat Pengadaan','Proses Pengadaan Barang & Jasa','Hasil Pengadaan Langsung','NO Id Pengadaan']}"></acContentHeader>
 
 <section class="content">
   <div class="box box-success">
+    <div class="box-header with-border ">
+      <div class="col-md-6">
+        <acSelect [(value)]="data.penyedia" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'Penyedia I'},{'val':1,'text':'Penyedia B'}],'judul':'Penyedia Terpilih'}"></acSelect>
+      </div>
+      <div class="col-md-6">
+        <div style="padding:27px 0px 0px 10px;" class="form-group row">
+          <a class="btn btn-sm btn-success">Tetapkan</a>
+          <a class="btn btn-sm btn-success">Perbaharui</a>
+        </div>
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-12">
         <!-- Custom Tabs -->
         <div class="nav-tabs-custom">
           <ul class="nav nav-tabs">
-            <li class="active"><a href="#tab_1" data-toggle="tab">Undangan Pelaksanaan</a></li>
-            <li><a href="#tab_3" data-toggle="tab">Undangan Klarifikasi</a></li>
+            <li class="active"><a href="#tab_1" data-toggle="tab">Berita Acara HPL</a></li>
+            <li><a href="#tab_2" data-toggle="tab">Penetapan & Pengumuman Pelaksanaan</a></li>
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="tab_1">
               <form role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
                 <div class="box-body chat" id="chat-box">
-                  <div style="padding:0px 60px 0px 60px" class='col-md-6'>
-                    <acSelect [(value)]="data.requestor" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'Requestor A'},{'val':1,'text':'Requestor B'}],'judul':'Requestor'}"></acSelect>
-                    <acInput [(value)]='data.alamat' [conf]="{'readonly':false,'judul':'Tempat & Alamat','required':false}"></acInput>
-                    <acInput [(value)]='data.telepon' [conf]="{'readonly':false,'judul':'Telepon','required':false}"></acInput>
-                    <acInput [(value)]='data.Website' [conf]="{'readonly':false,'judul':'Website','required':false}"></acInput>
+                  <div style="padding:0px 60px 0px 60px" class='col-md-612'>
+                    <acSelect [(value)]="data.Penyedia" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'Penyedia I'},{'val':1,'text':'Penyedia II'}],'judul':'Penyedia Terpilih'}"></acSelect>
+                    <acInput [(value)]='data.Website' [conf]="{'readonly':false,'judul':'Tgl','required':false,'type':'text'}"></acInput>
+                    <acInput [(value)]='data.nama' [conf]="{'readonly':false,'judul':'Nama Peserta','type':'text6'}"></acInput>
+                    <acInput [(value)]='data.ha' [conf]="{'readonly':false,'judul':'Harga Awal','required':false,'type':'number'}"></acInput>
+                    <acInput [(value)]='data.hak' [conf]="{'readonly':false,'judul':'Harga Akhir','required':false,'type':'number'}"></acInput>
                   </div>
-
-                  <div style="padding:0px 60px 0px 60px" class='col-md-6'>
-                    <acInput [(value)]='data.Website' [conf]="{'readonly':false,'judul':'a. Pemasukan Dokumen Penawaran','required':false,'type':'dateFromTo'}"></acInput>
-                    <acInput [(value)]='data.Website' [conf]="{'readonly':false,'judul':'b. Evaluasi Dokumen','required':false,'type':'dateFromTo'}"></acInput>
-                    <acInput [(value)]='data.Website' [conf]="{'readonly':false,'judul':'c. Penandatangan SPK','required':false,'type':'dateFromTo'}"></acInput>
-                    <acInput [(value)]='data.tglDibuat' [conf]="{'readonly':false,'judul':'Tgl Di buat','required':false,'type':'date'}"></acInput>
-                    <div class='col-md-6'>
-                      <a class="btn btn-sm btn-success">Perbaharui</a>
-                    </div>
-                    <div class='col-md-6'>
-                      <button class="btn btn-sm btn-success">Simpan</button>
-                    </div>
-                  </div>
-                  <div class='col-md-12'>
-                    <h3 class="box-title pull-right"> <a href="javascript: void(0);" class="btn btn-link margin-inline" data-toggle="modal" data-target="#penyediaModal">Tambah / Tunjuk Penyedia >></a></h3>
-                  </div>
-                  <div class="box-body chat" id="chat-box" style="overflow-x: scroll;">
-                    <table style="padding:0px 60px 0px 60px; background-color:lightblue;" class='table table-striped col-md-12 text-center'>
-                      <tr>
-                        <th>Id Penyedia</th>
-                        <th>Nama Penyedia</th>
-                        <th>Alamat</th>
-                        <th>Nama Cp</th>
-                        <th>Telepon</th>
-                        <th colspan="6">Action</th>
-                      </tr>
-                      <tr>
-                        <td>VN0001</td>
-                        <td>CV A Berantas</td>
-                        <td>Jln. Jauh No 4 </td>
-                        <td>Lyana Martel</td>
-                        <td>08121123311</td>
-                        <td><button class="btn btn-xs btn-success">Buat Undangan</button></td>
-                        <td><a data-toggle="modal" data-target="#penawaranModal" class="btn btn-xs btn-success">Upload Penawaran</a></td>
-                        <td><button class="btn btn-xs btn-success">Preview Penawaran</button></td>
-                        <td><button class="btn btn-xs btn-success">Buat Undangan Klarifikasi Harga</button></td>
-                        <td><a data-toggle="modal" data-target="#baModal" class="btn btn-xs btn-success">Buat BA Klarifikasi Harga</a></td>
-                        <td><button class="btn btn-xs btn-danger">Delete</button></td>
-                      </tr>
-                      <tr>
-                        <td>VN0002</td>
-                        <td>CV B Angkara</td>
-                        <td>Jln. Santai No 2 </td>
-                        <td>Sansa Stark</td>
-                        <td>081711391231</td>
-                        <td><button class="btn btn-xs btn-success">Buat Undangan</button></td>
-                        <td><a data-toggle="modal" data-target="#penawaranModal" class="btn btn-xs btn-success">Upload Penawaran</a></td>
-                        <td><button class="btn btn-xs btn-success">Preview Penawaran</button></td>
-                        <td><a data-toggle="modal" data-target="#klarifikasiModal" class="btn btn-xs btn-success">Buat Undangan Klarifikasi Harga</a></td>
-                        <td><a data-toggle="modal" data-target="#baModal" class="btn btn-xs btn-success">Buat BA Klarifikasi Harga</a></td>
-                        <td><button class="btn btn-xs btn-danger">Delete</button></td>
-                      </tr>
-                    </table>
+                  <div class="box-footer chat text-center" id="chat-box" style="overflow-x: scroll;">
+                    <button type="submit" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Simpan BA HPL</button>
+                    <button type="submit" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Print BA HPL</button>
+                    <button type="submit" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Perbaharui BA HPL</button>
                   </div>
                 </div>
               </form>
+            </div>
+            <div class="tab-pane" id="tab_2">
+              <!-- <acSelect [(value)]="data."pejabat [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'Pejabat I'},{'val':1,'text':'Pejabat II'}],'judul':'Pejabat Pengadaan'}"></acSelect> -->
 
             </div>
-            <!-- /.tab-pane -->
-            <div class="tab-pane" id="tab_3">
-              <form style="padding:20px" role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Form Klarifikasi Harga</h4>
-                </div>
-                <div class="modal-body">
-                  <acSelect [(value)]="data.requestor" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'Requestor A'},{'val':1,'text':'Requestor B'}],'judul':'Requestor'}"></acSelect>
-                  <acInput [(value)]='data.tanggal' [conf]="{'readonly':false,'judul':'Tanggal','required':false,'type':'date'}"></acInput>
-                  <acInput [(value)]='data.jam' [conf]="{'readonly':false,'judul':'Pukul','required':false,'type':'time'}"></acInput>
-                  <acInput [(value)]='data.tempat' [conf]="{'readonly':false,'judul':'Tempat','required':false,'type':'text'}"></acInput>
-                  <acInput [(value)]='data.acara' [conf]="{'readonly':false,'judul':'Acara','required':false,'type':'text'}"></acInput>
-                </div>
-                <div class="modal-footer">
-                  <a data-toggle="modal" onclick="$('#klarifikasiModal').modal('hide');" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Kembali</a>
-                </div>
-              </form>
-            </div>
-            <!-- /.tab-pane -->
           </div>
-          <!-- /.tab-content -->
         </div>
-        <!-- nav-tabs-custom -->
       </div>
-      <!-- /.col -->
     </div>
-
   </div>
 </section>
 <!-- Modal -->

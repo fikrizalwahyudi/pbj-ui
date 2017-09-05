@@ -26,6 +26,7 @@ import { PenerbitanNotaComponent } from './pengadaan/penerbitan-nota/penerbitan-
 import { DraftPenyediaComponent } from './pengadaan/draft-penyedia/draft-penyedia.component';
 import { PelaksanaanPengadaanComponent } from './pengadaan/pelaksanaan-pengadaan/pelaksanaan-pengadaan.component';
 import { LdpComponent } from './pengadaan/ldp/ldp.component';
+import { PphComponent } from './pengadaan/pph/pph.component';
 
 // canActivate:[AuthGuard]
 @NgModule({
@@ -61,6 +62,7 @@ import { LdpComponent } from './pengadaan/ldp/ldp.component';
           { path: 'draftPenyedia', component: DraftPenyediaComponent },
           { path: 'pelaksaanPengadaan', component: PelaksanaanPengadaanComponent },
           { path: 'ldp', component: LdpComponent },
+          { path: 'pph', component: PphComponent },
         ]
       }
     ])
