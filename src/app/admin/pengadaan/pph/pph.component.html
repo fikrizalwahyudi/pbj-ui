@@ -25,7 +25,7 @@
             <div class="tab-pane active" id="tab_1">
               <form role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
                 <div class="box-body chat" id="chat-box">
-                  <div style="padding:0px 60px 0px 60px" class='col-md-612'>
+                  <div style="padding:0px 60px 0px 60px" class='col-md-12'>
                     <acSelect [(value)]="data.Penyedia" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'Penyedia I'},{'val':1,'text':'Penyedia II'}],'judul':'Penyedia Terpilih'}"></acSelect>
                     <acInput [(value)]='data.Website' [conf]="{'readonly':false,'judul':'Tgl','required':false,'type':'text'}"></acInput>
                     <acInput [(value)]='data.nama' [conf]="{'readonly':false,'judul':'Nama Peserta','type':'text6'}"></acInput>
@@ -41,8 +41,30 @@
               </form>
             </div>
             <div class="tab-pane" id="tab_2">
-              <!-- <acSelect [(value)]="data."pejabat [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'Pejabat I'},{'val':1,'text':'Pejabat II'}],'judul':'Pejabat Pengadaan'}"></acSelect> -->
-
+              <form role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+                <div class="box-body chat" id="chat-box">
+                  <div style="padding:0px 60px 0px 60px" class='col-md-12'>
+                    <acSelect [(value)]="data.pejabatPengadaan" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'Pejabat I'},{'val':1,'text':'Pejabat II'}],'judul':'Pejabat Pengadaan'}"></acSelect>
+                    <acInput [(value)]='data.tgl' [conf]="{'readonly':false,'judul':'Tgl','type':'date'}"></acInput>
+                    <acInput [(value)]='data.namaPenyedia' [conf]="{'readonly':true,'judul':'Nama Penyedia','type':'text'}"></acInput>
+                    <acInput [(value)]='data.hps' [conf]="{'readonly':true,'judul':'Harga Perkiraan Sementara','type':'number'}"></acInput>
+                    <acInput [(value)]='data.ha' [conf]="{'readonly':true,'judul':'Harga Awal','type':'number'}"></acInput>
+                    <acInput [(value)]='data.hak' [conf]="{'readonly':true,'judul':'Harga Akhir','type':'number'}"></acInput>
+                    <acInput [(value)]='data.sifat' [conf]="{'readonly':false,'judul':'Sifat','type':'number'}"></acInput>
+                    <acInput [(value)]='data.lampiran' [conf]="{'readonly':false,'judul':'Lampiran','type':'text'}"></acInput>
+                    <acInput [(value)]='data.Perihal' [conf]="{'readonly':false,'judul':'Perihal','type':'text'}"></acInput>
+                    <acInput [(value)]='data.namaPekerjaan' [conf]="{'readonly':false,'judul':'Nama Pekerjaan','type':'text'}"></acInput>
+                    <acInput [(value)]='data.pelaksanaanPekerjaan' [conf]="{'readonly':true,'judul':'Pelaksanaan Pekerjaan','type':'text'}"></acInput>
+                    <acInput [(value)]='data.tempatPenetapan' [conf]="{'readonly':true,'judul':'Tempat Penetapan','type':'text'}"></acInput>
+                    <acInput [(value)]='data.tglPenetapan' [conf]="{'readonly':false,'judul':'Tanggal Penetapan','type':'date'}"></acInput>
+                  </div>
+                  <div class="box-footer chat text-center" id="chat-box" style="overflow-x: scroll;">
+                    <button type="submit" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Simpan</button>
+                    <button type="submit" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Print</button>
+                    <button type="submit" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Perbaharui</button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
