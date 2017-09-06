@@ -1,4 +1,4 @@
-<acContentHeader [conf]="{'judul':'','subJudul':'','hirarki':['Pejabat Pengadaan','Penerbitan Nota Ke UPHP','No Id Pengadaan']}"></acContentHeader>
+<acContentHeader [conf]="{'judul':'','subJudul':'','hirarki':['Pejabat Pengadaan','Penerbitan Nota Ke PP','No Id Pengadaan']}"></acContentHeader>
 
 <section class="content">
   <div class="box box-success">
@@ -7,18 +7,18 @@
     <form role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
       <div class="box-body chat" id="chat-box">
         <div style="padding:0px 60px 0px 60px" class='col-md-6'>
-          <acInput [(value)]='data.noIdPengadaan' [conf]="{'readonly':false,'judul':'No ID Pengadaan','required':false,'type':'number'}"></acInput>
-          <acSelect [(value)]="data.requestor" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'Requestor A'},{'val':1,'text':'Requestor B'}],'judul':'Requestor'}"></acSelect>
-          <acSelect [(value)]="data.kepada" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'KPA 1'},{'val':1,'text':'KPA II'}],'judul':'Kepada'}"></acSelect>
-          <acInput [(value)]='data.nomor' [conf]="{'readonly':false,'judul':'Nomor','required':false}"></acInput>
-          <acInput [(value)]='data.tgl' [conf]="{'readonly':false,'judul':'Tanggal','required':false,'type':'date'}"></acInput>
+          <acInput [(value)]='data.noIdPengadaan' [conf]="{'readonly':true,'judul':'No ID Pengadaan','required':false,'type':'number'}"></acInput>
+          <acSelect [(value)]="data.requestor" [conf]="{'disabled':true,'type':'select','options':[{'val':0,'text':'Requestor A'},{'val':1,'text':'Requestor B'}],'judul':'Requestor'}"></acSelect>
+          <acSelect [(value)]="data.kepada" [conf]="{'disabled':true,'type':'select','options':[{'val':0,'text':'KPA 1'},{'val':1,'text':'KPA II'}],'judul':'Kepada'}"></acSelect>
+          <acInput [(value)]='data.nomor' [conf]="{'readonly':true,'judul':'Nomor','required':false}"></acInput>
+          <acInput [(value)]='data.tgl' [conf]="{'readonly':true,'judul':'Tanggal','required':false,'type':'date'}"></acInput>
         </div>
 
         <div style="padding:0px 60px 0px 60px" class='col-md-6'>
-          <acSelect [(value)]="data.sifat" [conf]="{'disabled':false,'type':'select','options':[{'val':'KAA','text':'KAB'},{'val':1,'text':'KPA II'}],'judul':'Sifat'}"></acSelect>
-          <acInput [(value)]='data.perihal' [conf]="{'readonly':false,'judul':'Perihal','required':false,'type':'number'}"></acInput>
-          <acInput [(value)]='data.program' [conf]="{'readonly':false,'judul':'Program','required':false,'type':'number'}"></acInput>
-          <acInput [(value)]='data.kegiatan' [conf]="{'readonly':false,'judul':'Kegiatan','required':false,'type':'number'}"></acInput>
+          <acSelect [(value)]="data.sifat" [conf]="{'disabled':true,'type':'select','options':[{'val':'KAA','text':'KAB'},{'val':1,'text':'KPA II'}],'judul':'Sifat'}"></acSelect>
+          <acInput [(value)]='data.perihal' [conf]="{'readonly':true,'judul':'Perihal','required':false,'type':'number'}"></acInput>
+          <acInput [(value)]='data.program' [conf]="{'readonly':true,'judul':'Program','required':false,'type':'number'}"></acInput>
+          <acInput [(value)]='data.kegiatan' [conf]="{'readonly':true,'judul':'Kegiatan','required':false,'type':'number'}"></acInput>
         </div>
         <div class="box-body chat" id="chat-box">
           <table style="padding:0px 60px 0px 60px; background-color:lightblue;" class='table table-striped col-md-12 text-center'>
@@ -103,8 +103,8 @@
               <td class='col-md-5'>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" checked> Dokumen HPS
-                  </label>
+                                <input type="checkbox" checked> Dokumen HPS
+                            </label>
                 </div>
               </td>
               <td class='col-md-3'>
@@ -117,8 +117,8 @@
               <td class='col-md-5'>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" checked> Draft Kontrak
-                  </label>
+                                  <input type="checkbox" checked> Draft Kontrak
+                              </label>
                 </div>
               </td>
               <td class='col-md-3'>
@@ -131,8 +131,22 @@
               <td class='col-md-5'>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" checked> SPBBJ
-                  </label>
+                      <input type="checkbox" checked> Penetapan Pelaksana Pekerjaan
+                    </label>
+                </div>
+              </td>
+              <td class='col-md-3'>
+                <a (click)="onSubmit()" href="javascript: void(0);" class="btn btn-link margin-inline">Preview Doc >></a>
+              </td>
+            </tr>
+            <tr>
+              <td class='col-md-5'>
+              </td>
+              <td class='col-md-5'>
+                <div class="checkbox">
+                  <label>
+                      <input type="checkbox" checked> Pengumuman Pelaksana Pekerjaan
+                    </label>
                 </div>
               </td>
               <td class='col-md-3'>
@@ -144,11 +158,7 @@
       </div>
       <div class="box-footer">
         <div class='text-center'>
-          <button style='margin: 0px 0px 0px 0px;' class="btn btn-success">Penyedia Barang / Jasa</button>
-          <button style='margin: 0px 0px 0px 0px;' class="btn btn-success">Buat LDP, DKH, Spek & Gambar</button>
-          <button style='margin: 0px 0px 0px 0px;' class="btn btn-success">Hasil Pengadaan Langsung</button>
-          <button style='margin: 0px 0px 0px 0px;' class="btn btn-success">Intruksi Kepada Penyedia (IKP)</button>
-          <a data-toggle="modal" data-target="#prosesModal" style='margin: 0px 0px 0px 0px;' class="btn btn-success">Kirim Hasil Pemilihan Penyedia </a>
+          <a data-toggle="modal" data-target="#prosesModal" style='margin: 0px 0px 0px 0px;' class="btn btn-success">Tutup Pengadaan Barang & Jasa</a>
         </div>
       </div>
     </form>
@@ -168,8 +178,8 @@
           <h4 class="modal-title">Tambah Detail Akun Pengadaan</h4>
         </div>
         <div class="modal-body">
-          <acInput [(value)]='data.noIdPengadaan' [conf]="{'readonly':false,'judul':'No ID Pengadaan','required':false,'type':'text'}"></acInput>
-          <acSelect [(value)]="data.kepada" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'KPA 1'},{'val':1,'text':'KPA II'}],'judul':'Kepada'}"></acSelect>
+          <acInput [(value)]='data.noIdPengadaan' [conf]="{'readonly':true,'judul':'No ID Pengadaan','required':false,'type':'text'}"></acInput>
+          <acSelect [(value)]="data.kepada" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'PPHP 1'},{'val':1,'text':'PPHP 2'}],'judul':'Kepada PPHP'}"></acSelect>
         </div>
         <div class="modal-footer">
           <button data-toggle="modal" data-target="#prosesModal" type="submit" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Terbitkan Nota Ke PPK</button>
