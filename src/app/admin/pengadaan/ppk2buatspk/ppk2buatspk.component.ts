@@ -14,4 +14,12 @@ export class Ppk2buatspkComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit(){
+    alert('Masih Dalam Proses Pengembangan');
+  }
+
+  onchange(){
+    
+  }
+
 }

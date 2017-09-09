@@ -18,9 +18,8 @@ export class PelaksanaanPengadaanComponent implements OnInit {
     alert('Masih Dalam Proses Pengembangan');
   }
 
-  onChange(a) {
-    console.log(a);
-    
+  onChange(id){
+    alert('Masih Dalam Proses Pengembangan');  
   }
 
 }

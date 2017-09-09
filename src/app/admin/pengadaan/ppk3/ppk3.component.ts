@@ -13,5 +13,12 @@ export class Ppk3Component implements OnInit {
 
   ngOnInit() {
   }
+  onSubmit(){
+    alert('Masih Dalam Proses Pengembangan');
+  }
+
+  onchange(){
+    
+  }
 
 }
