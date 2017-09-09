@@ -18,4 +18,8 @@ export class PphComponent implements OnInit {
     alert('Masih Dalam Proses Pengembangan');
   }
 
+  onChange(id){
+    alert('Masih Dalam Proses Pengembangan');
+  }
+
 }

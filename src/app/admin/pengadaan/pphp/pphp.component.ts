@@ -15,4 +15,12 @@ export class PphpComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit(){
+    alert('Masih Dalam Proses Pengembangan');
+  }
+
+  onchange(){
+    
+  }
+
 }
