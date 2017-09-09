@@ -1,0 +1,92 @@
+<acContentHeader [conf]="{'judul':'Pembuatan Draft Kontrak (SPK)','subJudul':'No ID Pengadaan','hirarki':['PPK','Penerbitan Nota ke PP','Pembuatan Draft Kontrak (SPK)','No ID Pengadaan']}"></acContentHeader>
+
+<section class="content">
+  <div class="box box-success">
+      <div  class="box-header with-border ">
+      </div>
+      <form role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+          <div class="box-body chat" id="chat-box"  >
+              <div style="padding:0px 60px 0px 60px" class='col-md-12'>
+                <acInput [(value)]='data.satuanKerja' [conf]="{'readonly':false,'judul':'Satuan Kerja','required':false,'type':'text'}" ></acInput>
+                <acInput [(value)]='data.noAndTgl' [conf]="{'readonly':false,'judul':'Nomor & Tanggal','required':false,'type':'date'}" ></acInput>
+                <acInput [(value)]='data.paketPekerjaan' [conf]="{'readonly':false,'judul':'Paket Pekerjaan','required':false,'type':'text'}" ></acInput>
+                <acInput [(value)]='data.sumberDana' [conf]="{'readonly':false,'judul':'Sumber Dana','required':false,'type':'text'}" ></acInput>
+                <!-- <acSelect [(value)]="data.requestor"  [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'Requestor A'},{'val':1,'text':'Requestor B'}],'judul':'Requestor'}" ></acSelect>   -->
+                <acInput [(value)]='data.waktuPelaksanaan' [conf]="{'readonly':false,'judul':'Waktu Pelaksanaan','required':false,'type':'date'}" ></acInput>
+                <acInput [(value)]='data.namaPenyedia' [conf]="{'readonly':false,'judul':'Nama Penyedia','required':false,'type':'text'}" ></acInput>
+              </div>
+              <div  class="box-body chat" id="chat-box"  >
+                <table style="padding:0px 60px 0px 60px; background-color:lightblue;"   class='table table-striped col-md-12 text-center'>
+                    <tr>
+                      <th>No</th>
+                      <th>Uraian Pekerjaan</th>
+                      <th>Kuantitas</th>
+                      <th>Satuan</th>
+                      <th>Harga Satuan</th>
+                      <th>Total</th>
+                      <th>Action</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Laptop A</td>
+                      <td>1</td>
+                      <td>Unit</td>
+                      <td>Rp. 12.500.000</td>
+                      <td>Rp. 12.500.000</td>
+                      <td>Update | Delete</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Laptop A</td>
+                      <td>1</td>
+                      <td>Unit</td>
+                      <td>Rp. 12.500.000</td>
+                      <td>Rp. 12.500.000</td>
+                      <td>Update | Delete</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Laptop A</td>
+                      <td>1</td>
+                      <td>Unit</td>
+                      <td>Rp. 12.500.000</td>
+                      <td>Rp. 12.500.000</td>
+                      <td>Update | Delete</td>
+                    </tr>
+                  </table>
+                </div>
+                <div>
+                </div>
+          </div>
+          <div class="box-footer">
+              <h3  class="box-title pull-right"> <a data-toggle="modal" data-target="#prosesModal" href="javascript: void(0);" class="btn btn-link margin-inline">Tambah Item >></a></h3>
+          </div>
+      </form>
+  </div>
+</section>
+
+
+<div id="prosesModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <form style="padding:20px" role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Pembuatan Harga Perkiraan Sendiri & Spesifikasi Teknis</h4>
+        </div>
+        <div class="modal-body">
+            <acInput [(value)]='data.uraianPekerjaan' [conf]="{'judul':'Uraian Pekerjaan','required':false,'type':'text'}" ></acInput>
+            <acInput [(value)]='data.kuantitas' [conf]="{'judul':'Kuantitas','required':false,'type':'number'}" ></acInput>
+            <acSelect [(value)]="data.satuan"  [conf]="{'type':'select','options':[{'val':0,'text':'KG'},{'val':1,'text':'Set'}],'judul':'Satuan'}" ></acSelect> 
+            <acSelect [(value)]="data.hargaSatuan"  [conf]="{'type':'select','options':[{'val':0,'text':'KG'},{'val':1,'text':'Set'}],'judul':'Harga Satuan'}" ></acSelect> 
+        </div>
+        <div class="modal-footer">
+            <button data-toggle="modal" data-target="#prosesModal"   type="submit" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Simpan</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>

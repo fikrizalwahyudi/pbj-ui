@@ -1,0 +1,227 @@
+<acContentHeader [conf]="{'judul':'','subJudul':'','hirarki':['PPHP','Penerbitan Nota Ke PP','No Id Pengadaan']}"></acContentHeader>
+
+<section class="content">
+  <div class="box box-success">
+    <div class="box-header with-border ">
+    </div>
+    <form role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+      <div class="box-body chat" id="chat-box">
+        <div style="padding:0px 60px 0px 60px" class='col-md-6'>
+          <acInput [(value)]='data.noIdPengadaan' [conf]="{'readonly':true,'judul':'No ID Pengadaan','required':false,'type':'number'}"></acInput>
+          <acSelect [(value)]="data.requestor" [conf]="{'disabled':true,'type':'select','options':[{'val':0,'text':'Requestor A'},{'val':1,'text':'Requestor B'}],'judul':'Requestor'}"></acSelect>
+          <acSelect [(value)]="data.kepada" [conf]="{'disabled':true,'type':'select','options':[{'val':0,'text':'KPA 1'},{'val':1,'text':'KPA II'}],'judul':'Kepada'}"></acSelect>
+          <acInput [(value)]='data.nomor' [conf]="{'readonly':true,'judul':'Nomor','required':false}"></acInput>
+          <acInput [(value)]='data.tgl' [conf]="{'readonly':true,'judul':'Tanggal','required':false,'type':'date'}"></acInput>
+          <acSelect [(value)]="data.sifat" [conf]="{'disabled':true,'type':'select','options':[{'val':'KAA','text':'KAB'},{'val':1,'text':'KPA II'}],'judul':'Sifat'}"></acSelect>
+          <acInput [(value)]='data.perihal' [conf]="{'readonly':true,'judul':'Perihal','required':false,'type':'number'}"></acInput>
+        </div>
+
+        <div style="padding:0px 60px 0px 60px" class='col-md-6'>
+          <acInput [(value)]='data.program' [conf]="{'readonly':true,'judul':'Program','required':false,'type':'number'}"></acInput>
+          <acInput [(value)]='data.kegiatan' [conf]="{'readonly':true,'judul':'Kegiatan','required':false,'type':'number'}"></acInput>
+          <acInput [(value)]='data.penyedia' [conf]="{'readonly':true,'judul':'Penyedia','required':false,'type':'number'}"></acInput>
+          <acInput [(value)]='data.penyedia' [conf]="{'readonly':true,'judul':'Penyedia','required':false,'type':'number'}"></acInput>
+          <acInput [(value)]='data.noSpk' [conf]="{'readonly':true,'judul':'No SPK','required':false,'type':'number'}"></acInput>
+          <acInput [(value)]='data.paketPengerjaan' [conf]="{'readonly':true,'judul':'Paket Pengerjaan','required':false,'type':'number'}"></acInput>
+        </div>
+        <div class="box-body chat" id="chat-box">
+          <table style="padding:0px 60px 0px 60px; background-color:lightblue;" class='table table-striped col-md-12 text-center'>
+            <tr>
+              <th>Akun</th>
+              <th>Jenis Belanja</th>
+              <th>Pagu Anggaran</th>
+              <th>Sisa</th>
+              <th>Pengajuan Sekarang</th>
+            </tr>
+            <tr>
+              <td>898989</td>
+              <td>Dummy</td>
+              <td>Rp. 12.500.000</td>
+              <td>Rp. 1.000.000</td>
+              <td>Rp. 11.000.000</td>
+            </tr>
+            <tr>
+              <td>898989</td>
+              <td>Dummy</td>
+              <td>Rp. 12.500.000</td>
+              <td>Rp. 1.000.000</td>
+              <td>Rp. 11.000.000</td>
+            </tr>
+            <tr>
+              <td>898989</td>
+              <td>Dummy</td>
+              <td>Rp. 12.500.000</td>
+              <td>Rp. 1.000.000</td>
+              <td>Rp. 11.000.000</td>
+            </tr>
+          </table>
+        </div>
+        <div>
+          <table>
+            <tr>
+              <td class='col-md-5'>
+                Lampiran Dokumen
+              </td>
+              <td class='col-md-5'>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" checked> Nota PPK / PP
+                  </label>
+                </div>
+              </td>
+              <td class='col-md-2'>
+                <a (click)="onSubmit()" href="javascript: void(0);" class="btn btn-link margin-inline">Preview Doc >></a>
+              </td>
+            </tr>
+            <tr>
+              <td class='col-md-5'>
+              </td>
+              <td class='col-md-5'>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" checked> Dokumen KAK
+                  </label>
+                </div>
+              </td>
+              <td class='col-md-3'>
+                <a (click)="onSubmit()" href="javascript: void(0);" class="btn btn-link margin-inline">Preview Doc >></a>
+              </td>
+            </tr>
+            <tr>
+              <td class='col-md-5'>
+              </td>
+              <td class='col-md-5'>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" checked> Dokumen Spesifikasi Teknis
+                  </label>
+                </div>
+              </td>
+              <td class='col-md-3'>
+                <a (click)="onSubmit()" href="javascript: void(0);" class="btn btn-link margin-inline">Preview Doc >></a>
+              </td>
+            </tr>
+            <tr>
+              <td class='col-md-5'>
+              </td>
+              <td class='col-md-5'>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" checked> Dokumen HPS
+                  </label>
+                </div>
+              </td>
+              <td class='col-md-3'>
+                <a (click)="onSubmit()" href="javascript: void(0);" class="btn btn-link margin-inline">Preview Doc >></a>
+              </td>
+            </tr>
+            <tr>
+              <td class='col-md-5'>
+              </td>
+              <td class='col-md-5'>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" checked> Draft Kontrak
+                  </label>
+                </div>
+              </td>
+              <td class='col-md-3'>
+                <a (click)="onSubmit()" href="javascript: void(0);" class="btn btn-link margin-inline">Preview Doc >></a>
+              </td>
+            </tr>
+            <tr>
+              <td class='col-md-5'>
+              </td>
+              <td class='col-md-5'>
+                <div class="checkbox">
+                  <label>
+                      <input type="checkbox" checked> Penetapan Pelaksana Pekerjaan
+                    </label>
+                </div>
+              </td>
+              <td class='col-md-3'>
+                <a (click)="onSubmit()" href="javascript: void(0);" class="btn btn-link margin-inline">Preview Doc >></a>
+              </td>
+            </tr>
+            <tr>
+              <td class='col-md-5'>
+              </td>
+              <td class='col-md-5'>
+                <div class="checkbox">
+                  <label>
+                      <input type="checkbox" checked> Pengumuman Pelaksana Pekerjaan
+                    </label>
+                </div>
+              </td>
+              <td class='col-md-3'>
+                <a (click)="onSubmit()" href="javascript: void(0);" class="btn btn-link margin-inline">Preview Doc >></a>
+              </td>
+            </tr>
+            <tr>
+              <td class='col-md-5'>
+              </td>
+              <td class='col-md-5'>
+                <div class="checkbox">
+                  <label>
+                      <input type="checkbox" checked> LDP, DHK, Spesifikasi & Gambar
+                    </label>
+                </div>
+              </td>
+              <td class='col-md-3'>
+                <a (click)="onSubmit()" href="javascript: void(0);" class="btn btn-link margin-inline">Preview Doc >></a>
+              </td>
+            </tr>
+            <tr>
+              <td class='col-md-5'>
+              </td>
+              <td class='col-md-5'>
+                <div class="checkbox">
+                  <label>
+                      <input type="checkbox" checked> Surat Perintah Kerja
+                    </label>
+                </div>
+              </td>
+              <td class='col-md-3'>
+                <a (click)="onSubmit()" href="javascript: void(0);" class="btn btn-link margin-inline">Preview Doc >></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="box-footer">
+        <div class='text-center'>
+          <a data-toggle="modal" data-target="#prosesModal" style='margin: 0px 0px 0px 0px;' class="btn btn-xs  btn-success">Surat Perintah Memulai Pekerjaan</a>
+          <a data-toggle="modal" data-target="#prosesModal" style='margin: 0px 0px 0px 0px;' class="btn btn-xs btn-success">Permintaan Serah Terima Barang</a>
+          <a data-toggle="modal" data-target="#prosesModal" style='margin: 0px 0px 0px 0px;' class="btn btn-xs btn-success">Berita Acara Pemeriksaan Barang</a>
+          <a data-toggle="modal" data-target="#prosesModal" style='margin: 0px 0px 0px 0px;' class="btn btn-xs btn-success">Berita Acara Serah Terima Pekerjaan</a>
+          <a data-toggle="modal" data-target="#prosesModal" style='margin: 0px 0px 0px 0px;' class="btn btn-xs  btn-success">Proses Pengadaan Barang & Jasa</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<!-- Modal -->
+<div id="prosesModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <form style="padding:20px" role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Tambah Detail Akun Pengadaan</h4>
+        </div>
+        <div class="modal-body">
+          <acInput [(value)]='data.noIdPengadaan' [conf]="{'readonly':true,'judul':'No ID Pengadaan','required':false,'type':'text'}"></acInput>
+          <acSelect [(value)]="data.kepada" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'PPHP 1'},{'val':1,'text':'PPHP 2'}],'judul':'Kepada PPHP'}"></acSelect>
+        </div>
+        <div class="modal-footer">
+          <button data-toggle="modal" data-target="#prosesModal" type="submit" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Terbitkan Nota Ke PPK</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>

@@ -35,6 +35,8 @@ import { LdpComponent } from './pengadaan/ldp/ldp.component';
 import { PphComponent } from './pengadaan/pph/pph.component';
 import { Ppk2Component } from './pengadaan/ppk2/ppk2.component';
 import { Ppk3Component } from './pengadaan/ppk3/ppk3.component';
+import { PphpComponent } from './pengadaan/pphp/pphp.component';
+import { Ppk2buatspkComponent } from './pengadaan/ppk2buatspk/ppk2buatspk.component';
 
 
 @NgModule({
@@ -50,7 +52,7 @@ import { Ppk3Component } from './pengadaan/ppk3/ppk3.component';
     MainHeaderComponent, 
     FooterComponent, 
     ControlSidebarComponent, 
-    Dashboard1Component, SuratPertamaComponent, SuratKeduaComponent, PenggunaComponent, PegawaiComponent, PenyediaComponent, ProfileComponent, PenggunaFormComponent, PegawaiFormComponent, PenyediaFormComponent, PengadaanFormComponent, KakFormComponent, KpaComponent, PpkComponent, TeknisComponent, TinjauKakComponent, TinjauTeknisComponent, KertasKerjaComponent, DraftKontrakComponent, PenerbitanNotaComponent, DraftPenyediaComponent, PelaksanaanPengadaanComponent, LdpComponent, PphComponent, Ppk2Component, Ppk3Component
+    Dashboard1Component, SuratPertamaComponent, SuratKeduaComponent, PenggunaComponent, PegawaiComponent, PenyediaComponent, ProfileComponent, PenggunaFormComponent, PegawaiFormComponent, PenyediaFormComponent, PengadaanFormComponent, KakFormComponent, KpaComponent, PpkComponent, TeknisComponent, TinjauKakComponent, TinjauTeknisComponent, KertasKerjaComponent, DraftKontrakComponent, PenerbitanNotaComponent, DraftPenyediaComponent, PelaksanaanPengadaanComponent, LdpComponent, PphComponent, Ppk2Component, Ppk3Component, PphpComponent, Ppk2buatspkComponent
   ],
   exports: [AdminComponent]
 })

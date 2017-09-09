@@ -29,6 +29,8 @@ import { LdpComponent } from './pengadaan/ldp/ldp.component';
 import { PphComponent } from './pengadaan/pph/pph.component';
 import { Ppk2Component } from './pengadaan/ppk2/ppk2.component';
 import { Ppk3Component } from './pengadaan/ppk3/ppk3.component';
+import { PphpComponent } from './pengadaan/pphp/pphp.component';
+import { Ppk2buatspkComponent } from './pengadaan/ppk2buatspk/ppk2buatspk.component';
 
 // canActivate:[AuthGuard]
 @NgModule({
@@ -66,7 +68,9 @@ import { Ppk3Component } from './pengadaan/ppk3/ppk3.component';
           { path: 'ldp', component: LdpComponent },
           { path: 'pph', component: PphComponent },
           { path: 'ppk2', component: Ppk2Component },
-          { path: 'pp3', component: Ppk3Component },
+          { path: 'ppk3', component: Ppk3Component },
+          { path: 'pphp', component: PphpComponent },
+          { path: 'ppk2buatspk', component: Ppk2buatspkComponent },
         ]
       }
     ])

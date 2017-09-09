@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class Ppk3Component implements OnInit {
-
-  constructor() { }
+  data:any;
+  constructor() {
+    this.data={};
+   }
 
   ngOnInit() {
   }
