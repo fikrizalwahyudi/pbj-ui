@@ -190,10 +190,10 @@
       </div>
       <div class="box-footer">
         <div class='text-center'>
-          <a data-toggle="modal" data-target="#prosesModal" style='margin: 0px 0px 0px 0px;' class="btn btn-xs  btn-success">Surat Perintah Memulai Pekerjaan</a>
-          <a data-toggle="modal" data-target="#prosesModal" style='margin: 0px 0px 0px 0px;' class="btn btn-xs btn-success">Permintaan Serah Terima Barang</a>
-          <a data-toggle="modal" data-target="#prosesModal" style='margin: 0px 0px 0px 0px;' class="btn btn-xs btn-success">Berita Acara Pemeriksaan Barang</a>
-          <a data-toggle="modal" data-target="#prosesModal" style='margin: 0px 0px 0px 0px;' class="btn btn-xs btn-success">Berita Acara Serah Terima Pekerjaan</a>
+          <a data-toggle="modal" data-target="#suratPerintahMemulaiPekerjaanModal" style='margin: 0px 0px 0px 0px;' class="btn btn-xs  btn-success">Surat Perintah Memulai Pekerjaan</a>
+          <a data-toggle="modal" data-target="#serahTerimaModal" style='margin: 0px 0px 0px 0px;' class="btn btn-xs btn-success">Permintaan Serah Terima Barang</a>
+          <a data-toggle="modal" data-target="#beritaAcaraPemeriksaanModal" style='margin: 0px 0px 0px 0px;' class="btn btn-xs btn-success">Berita Acara Pemeriksaan Barang</a>
+          <a data-toggle="modal" data-target="#beritaAcaraSerahTerimaModal" style='margin: 0px 0px 0px 0px;' class="btn btn-xs btn-success">Berita Acara Serah Terima Pekerjaan</a>
           <a data-toggle="modal" data-target="#prosesModal" style='margin: 0px 0px 0px 0px;' class="btn btn-xs  btn-success">Proses Pengadaan Barang & Jasa</a>
         </div>
       </div>
@@ -223,5 +223,112 @@
       </form>
     </div>
 
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="suratPerintahMemulaiPekerjaanModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <form style="padding:20px" role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Surat Perintah Memulai Pekerjaan</h4>
+        </div>
+        <div class="modal-body">
+          <acSelect [(value)]="data.requestor" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'Requestor 1'},{'val':1,'text':'Requestor 2'}],'judul':'Requestor'}"></acSelect>
+          <acSelect [(value)]="data.peyedia" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'Penyedia 1'},{'val':1,'text':'Penyedia 2'}],'judul':'Penyedia'}"></acSelect>
+          <acInput [(value)]='data.tglMulai' [conf]="{'readonly':false,'judul':'Tanggal Mulai Kerja','required':false,'type':'date'}"></acInput>
+          <acInput [(value)]='data.tglSelesai' [conf]="{'readonly':false,'judul':'Tanggal Selesai Kerja','required':false,'type':'date'}"></acInput>
+        </div>
+        <div class="modal-footer">
+          <button data-toggle="modal" data-target="#suratPerintahMemulaiPekerjaanModal" type="submit" style='margin: 0px 0px 0px 60px;'
+            class="btn btn-success">Simpan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="serahTerimaModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <form style="padding:20px" role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Serah Terima Barang</h4>
+        </div>
+        <div class="modal-body">
+          <acInput [(value)]='data.penyedia' [conf]="{'readonly':true,'judul':'Penyedia','required':false,'type':'date'}"></acInput>
+          <acInput [(value)]='data.noKontrak' [conf]="{'readonly':true,'judul':'No Kontrak','required':false,'type':'text'}"></acInput>
+          <acInput [(value)]='data.tglSerahTerima' [conf]="{'readonly':false,'judul':'Tanggal Serah Terima','required':false,'type':'date'}"></acInput>
+        </div>
+        <div class="modal-footer">
+          <button data-toggle="modal" data-target="#serahTerimaModal" type="submit" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Simpan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="beritaAcaraPemeriksaanModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <form style="padding:20px" role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Berita Acara Pemeriksaan</h4>
+        </div>
+        <div class="modal-body">
+          <acInput [(value)]='data.id' [conf]="{'readonly':true,'judul':'Id','required':false,'type':'date'}"></acInput>
+          <acSelect [(value)]="data.panitiaPenerimaHasilKerja" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'Panitia 1'},{'val':1,'text':'Panitia 2'}],'judul':'Panitia Penerima Hasil Kerja'}"></acSelect>
+          <acInput [(value)]='data.penyedia' [conf]="{'readonly':true,'judul':'Penyedia','required':false,'type':'text'}"></acInput>
+          <acInput [(value)]='data.noKontrak' [conf]="{'readonly':true,'judul':'No Kontrak','required':false,'type':'text'}"></acInput>
+          <acInput [(value)]='data.tgl' [conf]="{'readonly':false,'judul':'Tanggal','required':false,'type':'date'}"></acInput>
+          <div class="form-group row">
+          <label>Penilaian</label>
+            <div class="form-control" >
+              <input name="options" ng-control="options" type="radio" [value]="1" [(ngModel)]="data.options">Baik Sesuai
+              Permintaan
+               <input name="options" ng-control="options" type="radio" [value]="2" [(ngModel)]="data.options">Kurang Baik
+              / Tidak Baik
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button data-toggle="modal" data-target="#beritaAcaraPemeriksaanModal" type="submit" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Simpan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="beritaAcaraSerahTerimaModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <form style="padding:20px" role="form" (ngSubmit)="onSubmit()" ngNativeValidate>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Berita Acara Serah Terima</h4>
+        </div>
+        <div class="modal-body">
+          <acInput [(value)]='data.id' [conf]="{'readonly':true,'judul':'Id','required':false,'type':'date'}"></acInput>
+          <acSelect [(value)]="data.panitiaPenerimaHasilKerja" [conf]="{'disabled':false,'type':'select','options':[{'val':0,'text':'Panitia 1'},{'val':1,'text':'Panitia 2'}],'judul':'Panitia Penerima Hasil Kerja'}"></acSelect>
+          <acInput [(value)]='data.penyedia' [conf]="{'readonly':true,'judul':'Penyedia','required':false,'type':'text'}"></acInput>
+          <acInput [(value)]='data.noKontrak' [conf]="{'readonly':true,'judul':'No Kontrak','required':false,'type':'text'}"></acInput>
+          <acInput [(value)]='data.tglserahTerima' [conf]="{'readonly':false,'judul':'Tanggal Disahkan Serah Terima','required':false,'type':'date'}"></acInput>
+        </div>
+        <div class="modal-footer">
+          <button data-toggle="modal" data-target="#beritaAcaraSerahTerimaModal" type="submit" style='margin: 0px 0px 0px 60px;' class="btn btn-success">Simpan</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
