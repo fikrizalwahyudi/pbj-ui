@@ -31,6 +31,7 @@ import { Ppk2Component } from './pengadaan/ppk2/ppk2.component';
 import { Ppk3Component } from './pengadaan/ppk3/ppk3.component';
 import { PphpComponent } from './pengadaan/pphp/pphp.component';
 import { Ppk2buatspkComponent } from './pengadaan/ppk2buatspk/ppk2buatspk.component';
+import { LaporanStatusPengadaanComponent } from './pengadaan/laporan-status-pengadaan/laporan-status-pengadaan.component';
 
 // canActivate:[AuthGuard]
 @NgModule({
@@ -71,6 +72,7 @@ import { Ppk2buatspkComponent } from './pengadaan/ppk2buatspk/ppk2buatspk.compon
           { path: 'ppk3', component: Ppk3Component },
           { path: 'pphp', component: PphpComponent },
           { path: 'ppk2buatspk', component: Ppk2buatspkComponent },
+          { path: 'laporan', component: LaporanStatusPengadaanComponent },
         ]
       }
     ])
