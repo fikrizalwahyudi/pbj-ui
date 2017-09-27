@@ -291,11 +291,11 @@
           <acInput [(value)]='data.noKontrak' [conf]="{'readonly':true,'judul':'No Kontrak','required':false,'type':'text'}"></acInput>
           <acInput [(value)]='data.tgl' [conf]="{'readonly':false,'judul':'Tanggal','required':false,'type':'date'}"></acInput>
           <div class="form-group row">
-          <label>Penilaian</label>
-            <div class="form-control" >
+            <label>Penilaian</label>
+            <div>
               <input name="options" ng-control="options" type="radio" [value]="1" [(ngModel)]="data.options">Baik Sesuai
               Permintaan
-               <input name="options" ng-control="options" type="radio" [value]="2" [(ngModel)]="data.options">Kurang Baik
+              <input name="options" ng-control="options" type="radio" [value]="2" [(ngModel)]="data.options">Kurang Baik
               / Tidak Baik
             </div>
           </div>
